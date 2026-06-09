@@ -1,0 +1,65 @@
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  position: relative;
+}
+
+.header__logo-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__menu-container {
+  position: absolute;
+  min-width: 125px;
+  height: 60px;
+  background-color: red;
+  border-radius: 30px;
+  top: 50px;
+  right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.header__menu-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 7px;
+  gap: 7px;
+  border-radius: 5px;
+  width: 37px;
+  transition: box-shadow 0.3s ease;
+}
+
+.header__menu-btn-line {
+  width: 23px;
+  height: 2px;
+  background-color: black;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0.3px 0.5px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
