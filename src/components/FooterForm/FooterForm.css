@@ -1,0 +1,130 @@
+.footerForm {
+}
+
+.footerForm__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerForm__inputs-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footerForm__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.footerForm__input {
+  padding: 7px 12px;
+  background-color: #e8e1d8;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  cursor: text;
+  margin-top: 2px;
+  font-size: 1.3rem;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.footerForm__input:focus {
+  border-width: 2px;
+}
+
+.footerForm__input::placeholder {
+  opacity: 1;
+}
+
+.footerForm__input-error {
+  border-color: red;
+}
+
+.footerForm__error-message,
+.footerForm__final-error-message {
+  color: red;
+  height: 18px;
+  font-weight: 400;
+}
+
+.footerForm__final-error-message {
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footerForm__submit-btn {
+  background-color: rgb(63, 152, 230);
+  padding: 0.7em 2em;
+  line-height: 1;
+  margin-right: auto;
+}
+
+.footerForm__submit-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.footerForm__radio {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.footerForm__radio p {
+  margin: 0 0 2px;
+}
+
+.footerForm__radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  padding: 5px;
+  background-color: rgb(221, 221, 221);
+  border: 1px solid rgb(180, 180, 180);
+  border-radius: 5px;
+}
+
+.footerForm__radio-group.footerForm__input-error {
+  border-color: red;
+}
+
+.footerForm__radio label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.footerForm__radio input[type="radio"] {
+  cursor: pointer;
+  accent-color: rgb(63, 152, 230);
+}
+
+.footerForm__radio-option {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0);
+
+  padding: 3px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.footerForm__radio-option:hover {
+  background-color: rgb(205, 205, 205);
+}
+
+.footerForm__radio-option--checked {
+  background-color: rgb(63, 152, 230, 0.15);
+  border: 1px solid rgb(63, 152, 230);
+}

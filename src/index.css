@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Darker Grotesque", sans-serif;
 }
 
 html,
@@ -13,11 +14,6 @@ body {
   font: inherit;
   color: inherit;
   background: transparent;
-}
-
-/* for the footer */
-#root {
-  padding-bottom: 75px;
 }
 
 a {
@@ -52,4 +48,13 @@ svg {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.52;
+}
+
+h2 {
+  letter-spacing: -0.05em;
 }

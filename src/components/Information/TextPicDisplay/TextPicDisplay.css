@@ -1,0 +1,32 @@
+.textPic {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  padding: 20px 120px 60px;
+}
+
+.textPic__title {
+  font-size: 8.33em;
+  font-weight: 700;
+  line-height: 0.7;
+  margin-bottom: 100px;
+}
+
+.textPic__container {
+  display: grid;
+  grid-template-columns: 30em auto;
+  grid-auto-columns: 1fr;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 1.5em;
+}
+
+.textPic__description {
+  font-family: "DM Sans";
+}
+
+.textPic__btn-container {
+  margin: 40px;
+}
+
+.textPic__btn {
+}

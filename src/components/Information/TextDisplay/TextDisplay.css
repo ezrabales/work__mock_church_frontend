@@ -1,0 +1,20 @@
+.text {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 32px 8rem;
+}
+
+.text__title {
+  text-wrap: balance;
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  font-size: 5rem;
+  margin-bottom: 70px;
+}
+
+.text__description {
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+  line-height: 1.5rem;
+  font-family: "DM Sans";
+}

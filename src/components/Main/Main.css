@@ -1,0 +1,38 @@
+.main {
+}
+
+.main__hero-vid-container {
+  border: 1px solid black;
+  border-radius: 20px;
+  height: 400px;
+  margin: 40px 120px;
+}
+
+.main__form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 160px 0 100px;
+  transform: translateY(-60px);
+  background-color: #e8e1d8;
+  border-radius: 0 0 50px 50px;
+}
+
+.main__form-subtitle {
+  font-family: "Cormorant Garamond";
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  opacity: 0.75;
+}
+
+.main__form-title {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.main__form-description {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+}

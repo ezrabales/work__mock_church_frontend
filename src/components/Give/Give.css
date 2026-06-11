@@ -1,0 +1,59 @@
+.give {
+}
+
+.give__fund-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.give__fund-container label {
+  font-weight: 600;
+}
+
+.give__fund-container select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+
+  background: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.give__fund-container select:focus {
+  outline: none;
+  border-color: #2c6e49;
+}
+
+.give__give-container {
+  width: 60em;
+  margin: auto;
+  padding: 50px 0;
+}
+
+.give__give-selector-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.give__give-selector-btn {
+  border-bottom: 1px solid black;
+  width: 100%;
+  text-align: center;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+}
+
+.give__give-selector-btn:hover {
+  padding-bottom: 5px;
+  margin-top: 0;
+}
+
+.give__give-selector-btn_active {
+  border-width: 2px;
+}

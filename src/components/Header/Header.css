@@ -1,8 +1,25 @@
+.glass {
+  background: rgba(255, 255, 255, 0.205);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 0.3px 0.5px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
 .header {
   height: 100px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0);
-  position: relative;
+  color: black;
+  position: fixed;
+  z-index: 10;
+  font-size: 1.19em;
+  font-family: "Darker Grotesque";
 }
 
 .header__logo-container {
@@ -12,7 +29,6 @@
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +38,6 @@
   position: absolute;
   min-width: 125px;
   height: 60px;
-  background-color: red;
   border-radius: 30px;
   top: 50px;
   right: 40px;
@@ -30,7 +45,27 @@
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 10px;
+  padding: 15px;
+  transition: all 0.5s ease;
+}
+
+.header__menu-container:hover {
+  background-color: rgba(0, 0, 0, 0.205);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 0 0.3px 0.5px rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+.header__menu-container:active {
+  transform: translateY(-3px);
+  scale: 0.95;
+}
+
+.header__menu-text {
+  font-weight: 700;
 }
 
 .header__menu-btn {
@@ -51,15 +86,7 @@
   background-color: black;
 }
 
-.glass {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-    inset 0 0 0.3px 0.5px rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+.header__spacer {
+  height: 100px;
+  display: block;
 }
