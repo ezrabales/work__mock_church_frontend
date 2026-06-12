@@ -1,16 +1,24 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { useForm } from "../../hooks/useForm";
 import DeckDisplay from "../Information/DeckDisplay/DeckDisplay";
 import TextDisplay from "../Information/TextDisplay/TextDisplay";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./Give.css";
+import GiveSelectInput from "./GiveSelectInput";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import Btn from "../Btn/Btn";
 
 const Give = () => {
+  const dateInputRef = useRef(null);
   const [btnActive, setBtnActive] = useState("recurring");
 
   const { values, handleChange, setValues } = useForm({
     fund: "",
     amount: "",
+    frequency: "",
+    gifts: "",
+    startDate: "",
   });
 
   const fundOptions = [
@@ -19,6 +27,11 @@ const Give = () => {
     { value: "Partially Paid", label: "Partially Paid" },
     { value: "Paid in Full", label: "Paid in Full" },
   ];
+
+  function handleSelectFundClick(e) {
+    console.log(e.target);
+  }
+
   return (
     <div className="give">
       <TextPicDisplay
@@ -173,32 +186,80 @@ const Give = () => {
           </button>
         </div>
         <div className="give__fund-container">
-          <label htmlFor="fund"></label>
-
-          <select
-            id="fund"
-            name="fund"
-            value={values.fund}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Select a status</option>
-            <option value="Not Charged">Not Charged</option>
-            <option value="Awaiting Payment">Awaiting Payment</option>
-            <option value="Partially Paid">Partially Paid</option>
-            <option value="Paid in Full">Paid in Full</option>
-          </select>
-          <label className="form__label">
+          <GiveSelectInput
+            setValues={setValues}
+            values={values}
+            input={{
+              name: "fund",
+              placeholder: "Fund",
+              options: ["one", "two", "three"],
+            }}
+          />
+          <label className="give__fund-label">
+            <span className="give__fund-input-prefix">$</span>
             <input
               name="amount"
               type="number"
-              className="form__input"
+              className="give__fund-input"
               placeholder="Amount"
               required
               onChange={handleChange}
               value={values.amount}
             />
           </label>
+        </div>
+        {btnActive === "recurring" && (
+          <div className="give__recurrence-container">
+            <h3 className="give__recurrence-title">Recurrence</h3>
+            <p className="give__recurrence-subtitle">
+              You can edit your recurring gift anytime.
+            </p>
+            <div className="give__recurrence-inputs-container">
+              <GiveSelectInput
+                setValues={setValues}
+                values={values}
+                input={{
+                  name: "frequency",
+                  placeholder: "Frequency",
+                  options: [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Twice a month",
+                    "Monthly",
+                    "Quarterly",
+                    "Annually",
+                  ],
+                }}
+              />
+              <label className="give__fund-label">
+                <input
+                  name="gifts"
+                  type="number"
+                  className="give__fund-input"
+                  placeholder="How many gifts (optional)"
+                  onChange={handleChange}
+                  value={values.gifts}
+                />
+              </label>
+
+              <DatePicker
+                className="give__fund-label"
+                selected={values.startDate}
+                onChange={(date) =>
+                  setValues((prev) => ({
+                    ...prev,
+                    startDate: date,
+                  }))
+                }
+                placeholderText="Start Date"
+              />
+            </div>
+          </div>
+        )}
+        <div className="give__btn-container">
+          <Btn follow="0.5" className={"give__btn"}>
+            Give
+          </Btn>
         </div>
       </div>
     </div>
