@@ -1,0 +1,93 @@
+.leader {
+}
+
+.leader__pastors-container {
+  background-color: #e8e1d8;
+  padding: 6rem 3rem 0;
+  border-radius: 1.25rem;
+  margin: 48px;
+  position: relative;
+}
+
+.leader__pastors-title {
+  font-size: 10rem;
+  letter-spacing: -0.08em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, -65%);
+}
+
+.leader__pastor-title {
+  letter-spacing: -0.045em;
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+.leader__pastor-description {
+  font-size: 18px;
+}
+
+.leader__board-container {
+  max-width: calc(56rem + 48px);
+  padding: 48px;
+  margin: 40px auto 80px;
+}
+
+.leader__board-title {
+  font-size: 1.4rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.leader__board-description {
+  font-size: 1rem;
+  letter-spacing: 0.025em;
+  line-height: 1.5rem;
+  font-family: "DM Sans";
+  font-weight: 300;
+}
+
+.leader__board-subdescription {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.04em;
+  padding: 2rem 0;
+}
+
+.leader__board-members-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  column-gap: 2.5rem;
+  row-gap: 1.8rem;
+}
+
+.leader__board-member {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.leader__board-member::after {
+  background-color: rgb(63, 152, 230);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  content: "";
+  height: 0.5rem;
+  left: 0;
+  position: absolute;
+  top: 0.6rem;
+  width: 0.5rem;
+}
+
+.leader__member-title {
+  letter-spacing: 0.025em;
+  line-height: 1.3;
+}
+
+.leader__member-description {
+  letter-spacing: 0.025em;
+}

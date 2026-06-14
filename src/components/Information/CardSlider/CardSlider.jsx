@@ -2,7 +2,7 @@ import { useRef, useCallback } from "react";
 import Btn from "../../Btn/Btn";
 import "./CardSlider.css";
 
-const CardSlider = ({ cards = [] }) => {
+const CardSlider = ({ title, cards = [] }) => {
   const sliderRef = useRef(null);
   const dragState = useRef({
     isDown: false,
@@ -120,7 +120,7 @@ const CardSlider = ({ cards = [] }) => {
 
   return (
     <div className="cardSlider">
-      <h2 className="cardSlider__title">Title</h2>
+      <h2 className="cardSlider__title">{title}</h2>
 
       <div
         ref={sliderRef}

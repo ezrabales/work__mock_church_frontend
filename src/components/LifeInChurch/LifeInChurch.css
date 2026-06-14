@@ -1,0 +1,37 @@
+.life {
+}
+
+.life__card-btn,
+.life__card-btn-alternate {
+  border-radius: 50px;
+  font-size: 18px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+}
+
+.life__card-btn {
+  background-color: black;
+  color: white;
+}
+
+.life__card-btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+.life__card-btn-alternate {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+  right: 30%;
+}
+
+.life__card-btn-alternate:hover {
+  background-color: black;
+  color: white;
+  border: 0;
+}

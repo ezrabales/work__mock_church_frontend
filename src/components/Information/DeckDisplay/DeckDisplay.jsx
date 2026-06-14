@@ -44,8 +44,8 @@ const DeckDisplay = ({ title, cards }) => {
           <div
             key={i}
             style={{
-              marginBottom: `-${15 + 1.8 * i}vh`,
-              top: `${15 + 1.8 * i}vh`,
+              marginBottom: `-${10 + 1.8 * i}vh`,
+              top: `${10 + 1.8 * i}vh`,
             }}
             className="deck__card"
           >

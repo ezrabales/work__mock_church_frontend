@@ -113,7 +113,7 @@
 
 .footer--visible .footer__gradient {
   opacity: 1;
-  transform: translate(50%, 50%);
+  transform: translate(50%, 46.5%);
   animation: pulseGlow 3s ease-in-out infinite;
 }
 

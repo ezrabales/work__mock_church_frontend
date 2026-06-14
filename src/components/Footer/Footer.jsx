@@ -3,12 +3,20 @@ import "./Footer.css";
 import FooterForm from "../FooterForm/FooterForm";
 import { useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { useGlobal } from "../GlobalState/GlobalState";
 
 const Footer = () => {
+  const { footerBackgroundColor } = useGlobal();
+  const [backgroundColor, setBackgroundColor] = useState(footerBackgroundColor);
   const links = [
     { name: "Homepage", to: "/" },
     { name: "Connect", to: "/connect" },
     { name: "Give", to: "/give" },
+    { name: "About", to: "/about" },
+    { name: "Life In Church", to: "/lifeInChurch" },
+    { name: "Plan Your Visit", to: "/planYourVisit" },
+    { name: "Beliefs", to: "/beliefs" },
+    { name: "Leadership", to: "/leadership" },
   ];
   const media = [
     { name: "YouTube", href: "https://www.youtube.com" },
@@ -23,7 +31,12 @@ const Footer = () => {
   const location = useLocation();
 
   useEffect(() => {
+    setBackgroundColor(footerBackgroundColor);
+  }, [footerBackgroundColor]);
+
+  useEffect(() => {
     setVisible(false);
+    setBackgroundColor(footerBackgroundColor);
   }, [location.pathname]);
 
   useEffect(() => {
@@ -48,6 +61,7 @@ const Footer = () => {
     <div
       ref={footerRef}
       className={`footer ${visible ? "footer--visible" : ""}`}
+      style={{ backgroundColor }}
     >
       <div className="footer__left">
         <div className="footer__logo-container"></div>

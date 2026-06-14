@@ -118,6 +118,33 @@ const Give = () => {
             ],
           },
           {
+            title: (
+              <>
+                Give to <br /> SOUL Church
+              </>
+            ),
+            description: (
+              <>
+                We love the people of our city and we aim to keep our doors open
+                at least five days a week. We have toddler groups, wellbeing
+                groups, friendship groups and study groups among others. Church
+                is so much more than a Sunday service. Thanks for your support!
+              </>
+            ),
+            btns: [
+              {
+                content: "Learn More",
+                follow: 0.3,
+                className: "deck__card-btn",
+              },
+              {
+                content: "Give",
+                follow: 0.3,
+                className: "deck__card-btn_transparent",
+              },
+            ],
+          },
+          {
             title: <>Our new home</>,
             description: (
               <>

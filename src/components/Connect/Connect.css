@@ -1,0 +1,36 @@
+.connect {
+}
+
+.connect__text-title,
+.connect__text-title_reverse {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 12em;
+  line-height: 0.8;
+  position: relative;
+  font-weight: 900;
+  letter-spacing: -0.9rem;
+  line-height: 12rem;
+  margin-bottom: 180px;
+}
+
+.connect__text-title_reverse {
+  text-align: end;
+}
+
+.connect__text-btn {
+  background-color: black;
+  border: 2px solid black;
+  color: white;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.connect__text-btn:hover {
+  background-color: white;
+  color: rgb(63, 152, 230);
+  border-color: rgb(63, 152, 230);
+}

@@ -1,0 +1,90 @@
+.drop {
+  grid-column-gap: 8vw;
+  grid-row-gap: 8vw;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  padding: 11em 7.81em 10.3em;
+  display: flex;
+  position: relative;
+}
+
+.drop__title {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 8.33em;
+  font-weight: 700;
+  line-height: 0.85;
+}
+
+.drop__drop-container {
+  width: 42.33em;
+}
+
+.drop__drop {
+  border-bottom: 1px solid black;
+}
+
+.drop__drop-title-container {
+  position: relative;
+  padding: 1.6em 1.32em 1.6em 0;
+  width: 100%;
+}
+
+.drop__drop-title {
+  width: 100%;
+  margin-right: 1em;
+  font-size: 1.6em;
+  font-weight: 700;
+}
+
+.drop__icon-container {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.drop__icon-container span:first-child {
+  height: 25px;
+  width: 2px;
+  background-color: black;
+  display: block;
+  transform: translate(-50%, 55%);
+  transition: transform 0.3s ease;
+}
+
+.drop__icon-container_open span:first-child {
+  transform: translate(-50%, 55%) rotate(90deg);
+}
+
+.drop__icon-container span:last-child {
+  width: 25px;
+  height: 2px;
+  background-color: black;
+  display: block;
+  transform: translate(-50%, 50%);
+}
+
+.drop__drop-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.drop__drop-content_open {
+  max-height: 300px; /* larger than your biggest description */
+}
+
+.drop__drop-description {
+  font-size: 1.19em;
+  font-family: "DM Sans";
+  padding-bottom: 30px;
+  padding-bottom: 30px;
+  transform: translateY(-10px);
+  transition: transform 0.4s ease;
+}
+
+.drop__drop-content_open .drop__drop-description {
+  transform: translateY(0);
+}

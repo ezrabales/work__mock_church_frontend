@@ -1,31 +1,45 @@
 .textPic {
-  background-color: rgb(255, 255, 255);
-  border-radius: 50px;
+  border-radius: 0 0 50px 50px;
   padding: 20px 120px 60px;
 }
 
-.textPic__title {
+.textPic__title,
+.textPic__title_reverse {
   font-size: 8.33em;
   font-weight: 700;
-  line-height: 0.7;
+  line-height: 0.77;
   margin-bottom: 100px;
 }
 
-.textPic__container {
-  display: grid;
-  grid-template-columns: 30em auto;
-  grid-auto-columns: 1fr;
+.textPic__title_reverse {
+  text-align: end;
+}
+
+.textPic__container,
+.textPic__container_reverse {
+  display: flex;
   justify-content: space-between;
   align-items: flex-start;
   font-size: 1.5em;
 }
 
+.textPic__container_reverse {
+  flex-direction: row-reverse;
+}
+
 .textPic__description {
   font-family: "DM Sans";
+  width: 50%;
+}
+
+.textPic__img-container {
+  width: 50%;
 }
 
 .textPic__btn-container {
-  margin: 40px;
+  margin: 40px 0;
+  position: relative;
+  min-height: 40px;
 }
 
 .textPic__btn {

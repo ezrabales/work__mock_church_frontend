@@ -1,0 +1,57 @@
+.about {
+}
+
+.about__text-title,
+.about__text-title_reverse {
+  text-transform: uppercase;
+  font-family: "Oswald";
+  font-size: 12em;
+  line-height: 0.8;
+  position: relative;
+  font-weight: 900;
+  letter-spacing: -0.9rem;
+  line-height: 12rem;
+  margin-bottom: 180px;
+}
+
+.about__text-title_reverse {
+  text-align: end;
+}
+
+.about__text-btn,
+.about__text-leadership-btn {
+  background-color: rgb(63, 152, 230);
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.about__text-btn:hover,
+.about__text-leadership-btn:hover {
+  color: rgb(63, 152, 230);
+  background-color: #e8e1d8;
+}
+
+.about__text-description {
+  font-size: 19px;
+}
+
+.about__text-subtitle {
+  padding-left: 50%;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  letter-spacing: -0.045em;
+  margin-bottom: 2rem;
+}
+
+.about__text-leadership-title_reverse {
+  text-align: end;
+  font-size: 10rem;
+}
+
+.about__text-leadership-btn {
+  text-transform: uppercase;
+  margin-left: auto;
+  display: block;
+}
