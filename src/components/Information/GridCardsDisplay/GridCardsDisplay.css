@@ -1,0 +1,72 @@
+.grids {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  width: 100%;
+  max-width: 1250px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto 80px;
+  padding: 90px;
+  border-radius: 50px;
+  background-color: #e8e1d8;
+}
+
+.grids__title {
+  font-size: 10rem;
+  letter-spacing: -0.08em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(20%, -65%);
+}
+
+.grids__card {
+  border-radius: 50px;
+  background-color: #ffffff;
+  padding: 20px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.418);
+}
+
+.grids__card-title {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 5px 0 10px 0;
+}
+
+.grids__card-date,
+.grids__card-time {
+  font-size: 15px;
+  font-family: "DM Sans";
+  opacity: 0.75;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+
+.grids__card-description {
+  font-family: "DM Sans";
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.grids__card-btn-container {
+  margin-top: auto;
+}
+
+.grids__card-btn {
+  border: 1px solid #00000000;
+  transition:
+    border 0.3s ease,
+    color 0.3s ease,
+    transform 0.1s ease;
+}
+
+.grids__card-btn:hover {
+  border: 1px solid rgb(63, 152, 230);
+  color: rgb(63, 152, 230);
+}

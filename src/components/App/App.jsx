@@ -12,6 +12,8 @@ import LifeInChurch from "../LifeInChurch/LifeInChurch";
 import PlanYourVisit from "../PlanYourVisit/PlanYourVisit";
 import Beliefs from "../Beliefs/Beliefs";
 import Leadership from "../Leadership/Leadership";
+import Groups from "../Groups/Groups";
+import Teams from "../Teams/Teams";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -30,6 +32,8 @@ const App = () => {
         <Route path="/planYourVisit" element={<PlanYourVisit />} />
         <Route path="/beliefs" element={<Beliefs />} />
         <Route path="/leadership" element={<Leadership />} />
+        <Route path="/groups" element={<Groups />} />
+        <Route path="/teams" element={<Teams />} />
       </Routes>
       <Footer />
     </GlobalProvider>

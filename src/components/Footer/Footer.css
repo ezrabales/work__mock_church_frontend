@@ -69,13 +69,13 @@
   scale: 0;
 
   transition:
-    scale 0.3s ease,
-    width 0.3s ease 0.4s,
-    height 0.3s ease 0.4s,
-    border-radius 0.3s ease 0.4s,
-    background-color 0.3s ease 0.4s,
-    border-color 0.3s ease 0.4s,
-    left 0.3s ease 0.4s;
+    scale 0.3s cubic-bezier(0.31, 1.02, 0.58, 1),
+    width 0.3s cubic-bezier(0.31, 1.02, 0.58, 1) 0.4s,
+    height 0.3s cubic-bezier(0.31, 1.02, 0.58, 1) 0.4s,
+    border-radius 0.3s cubic-bezier(0.31, 1.02, 0.58, 1) 0.4s,
+    background-color 0.3s cubic-bezier(0.31, 1.02, 0.58, 1) 0.4s,
+    border-color 0.3s cubic-bezier(0.31, 1.02, 0.58, 1) 0.4s,
+    left 0.3s cubic-bezier(0.31, 1.02, 0.58, 1) 0.4s;
 }
 
 .footer__link:hover::after {

@@ -17,6 +17,8 @@ const Footer = () => {
     { name: "Plan Your Visit", to: "/planYourVisit" },
     { name: "Beliefs", to: "/beliefs" },
     { name: "Leadership", to: "/leadership" },
+    { name: "Groups", to: "/groups" },
+    { name: "Teams", to: "/teams" },
   ];
   const media = [
     { name: "YouTube", href: "https://www.youtube.com" },
