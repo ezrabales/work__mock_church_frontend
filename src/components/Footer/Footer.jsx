@@ -6,10 +6,11 @@ import { useEffect, useRef, useState } from "react";
 import { useGlobal } from "../GlobalState/GlobalState";
 
 const Footer = () => {
+  const { media } = useGlobal();
   const { footerBackgroundColor } = useGlobal();
   const [backgroundColor, setBackgroundColor] = useState(footerBackgroundColor);
   const links = [
-    { name: "Homepage", to: "/" },
+    { name: "Home", to: "/" },
     { name: "Connect", to: "/connect" },
     { name: "Give", to: "/give" },
     { name: "About", to: "/about" },
@@ -19,13 +20,6 @@ const Footer = () => {
     { name: "Leadership", to: "/leadership" },
     { name: "Groups", to: "/groups" },
     { name: "Teams", to: "/teams" },
-  ];
-  const media = [
-    { name: "YouTube", href: "https://www.youtube.com" },
-    { name: "FaceBook", href: "https://www.facebook.com/" },
-    { name: "Twitter", href: "https://x.com/" },
-    { name: "Instagram", href: "https://www.instagram.com/" },
-    { name: "Podcast", href: "https://podcasts.apple.com/us" },
   ];
 
   const footerRef = useRef(null);

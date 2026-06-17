@@ -1,35 +1,55 @@
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { useEffect, useRef, useState } from "react";
+import { useGlobal } from "../GlobalState/GlobalState";
 
 const Header = () => {
-  const transitionSpanRef = useRef(null);
+  const { media } = useGlobal();
+  const openBackgroundRef = useRef(null);
   const headerOpenContainerRef = useRef(null);
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [menuIsOpening, setMenuIsOpening] = useState(false);
   const [menuIsClosing, setMenuIsClosing] = useState(false);
   const menuOpenTime = 0.8;
+  const menuTimeoutRef = useRef(null);
+
+  const links = [
+    { name: "Home", to: "/" },
+    { name: "Give", to: "/give" },
+    { name: "Connect", to: "/connect" },
+    { name: "About Us", to: "/about" },
+    { name: "Church Life", to: "/lifeInChurch" },
+    { name: "Plan Your Visit", to: "/planYourVisit" },
+  ];
 
   function toggleMenuOpen() {
+    if (menuTimeoutRef.current) {
+      clearTimeout(menuTimeoutRef.current);
+    }
+
     if (!menuIsOpen && !menuIsOpening) {
+      setMenuIsClosing(false);
       setMenuIsOpening(true);
-      setTimeout(() => {
+
+      menuTimeoutRef.current = setTimeout(() => {
         setMenuIsOpening(false);
         setMenuIsOpen(true);
+        menuTimeoutRef.current = null;
       }, menuOpenTime * 1000);
     } else {
       setMenuIsOpen(false);
       setMenuIsOpening(false);
       setMenuIsClosing(true);
-      setTimeout(() => {
+
+      menuTimeoutRef.current = setTimeout(() => {
         setMenuIsClosing(false);
+        menuTimeoutRef.current = null;
       }, menuOpenTime * 1000);
     }
   }
-
   // animate menu button
   useEffect(() => {
-    const el = transitionSpanRef.current;
+    const el = openBackgroundRef.current;
     if (!el) return;
 
     const rect = el.getBoundingClientRect();
@@ -57,84 +77,148 @@ const Header = () => {
       // opening
       el.style.transform = `scale(${scale})`;
       el.style.opacity = "1";
+      el.style.backgroundColor = "rgb(215, 200, 177)";
     } else if (menuIsOpen) {
-      // menu is open, hide element
-      el.style.opacity = "0";
+      // menu is open
+      el.style.backgroundColor = "rgb(215, 200, 177)";
     } else if (menuIsClosing) {
       // closing
-      el.style.transform = "scale(1)";
-      el.style.opacity = "1";
+      setTimeout(
+        () => {
+          el.style.transform = "scale(1)";
+        },
+        menuOpenTime * 1000 - 550,
+      );
     } else {
       // menu is closed
       el.style.opacity = "0";
     }
   }, [menuIsOpening, menuIsOpen, menuIsClosing]);
 
-  // animate open header
+  // handle open container
   useEffect(() => {
     const el = headerOpenContainerRef.current;
     if (!el) return;
 
     if (menuIsOpening) {
-      // opening
-      el.className = "header__open-container header__open-container_opening";
+      setTimeout(
+        () => {
+          el.className =
+            "header__open-container header__open-container_opening";
+        },
+        menuOpenTime * 1000 - 550,
+      );
     } else if (menuIsOpen) {
-      // open
       el.className = "header__open-container header__open-container_open";
     } else if (menuIsClosing) {
-      // closing
       el.className = "header__open-container header__open-container_closing";
     } else {
-      // closed
       el.className = "header__open-container";
     }
   }, [menuIsOpening, menuIsOpen, menuIsClosing]);
 
   return (
     <>
-      <div
-        className={`header ${menuIsOpen || menuIsOpening ? "header_open" : ""}`}
-      >
+      <div className="header">
         <NavLink
           to={"/"}
-          className={`header__logo-container glass ${menuIsOpen || menuIsOpening ? "header__logo-container_open" : ""}`}
+          className={`glass header__logo-container ${menuIsOpening || menuIsOpen ? "header__logo-container_open" : ""}`}
         >
           Church
         </NavLink>
-        <span
-          ref={transitionSpanRef}
-          className={`header__transition`}
-          style={{
-            transition:
-              "transform 0.8s cubic-bezier(.76,0,.24,1), opacity 0.2s cubic-bezier(.76,0,.24,1)",
-          }}
-        />
-        <button
-          className={`glass header__menu-container`}
-          onClick={() => toggleMenuOpen()}
-        >
-          <div
-            className={`header__menu-text-container ${menuIsOpen || menuIsOpening ? "header__menu-text-container_open" : ""}`}
-          >
-            <p className="header__menu-text-menu">MENU</p>
-            <p className="header__menu-text-close">CLOSE</p>
-          </div>
-          <div
-            className={`header__menu-btn ${menuIsOpen || menuIsOpening ? "header__menu-btn_open" : ""}`}
-            aria-label="menu button"
-          >
-            <span className="header__menu-btn-line" />
-            <span className="header__menu-btn-line" />
-            <span className="header__menu-btn-line" />
-          </div>
-        </button>
       </div>
+      <button
+        className="glass header__menu-container"
+        onClick={() => toggleMenuOpen()}
+      >
+        <div
+          className={`header__menu-text-container ${menuIsOpening || menuIsOpen ? "header__menu-text-container_open" : ""}`}
+        >
+          <p className="header__menu-text-menu">MENU</p>
+          <p className="header__menu-text-close">CLOSE</p>
+        </div>
+        <div
+          className={`header__menu-btn ${
+            menuIsOpen || menuIsOpening
+              ? "header__menu-btn_open"
+              : menuIsClosing
+                ? "header__menu-btn_closing"
+                : ""
+          }`}
+          aria-label="menu button"
+        >
+          <span className="header__menu-btn-line" />
+          <span className="header__menu-btn-line" />
+          <span className="header__menu-btn-line" />
+        </div>
+      </button>
+      <div ref={openBackgroundRef} className="header__open-background" />
       <div className="header__spacer" />
       <div ref={headerOpenContainerRef} className="header__open-container">
         <div className="header__open-left">
-          <span className="header__open-divider" />
+          <div className="header__open-links-container">
+            {links.map((link, i) => (
+              <div className="header__open-link-wrapper">
+                <NavLink
+                  to={link.to}
+                  className={"header__open-link"}
+                  onClick={() => toggleMenuOpen()}
+                >
+                  {link.name}
+                </NavLink>
+              </div>
+            ))}
+          </div>
+          <span className="header__open-border" />
         </div>
-        <div className="header__open-right">right</div>
+        <div className="header__open-right">
+          <div className="header__open-info-container">
+            <div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">Address:</p>
+              </div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">SOUL CHURCH</p>
+              </div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">4 Mason Rd, NR6 6RF</p>
+              </div>
+            </div>
+            <div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">Email:</p>
+              </div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">info@soulchurch.com</p>
+              </div>
+            </div>
+            <div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">Call:</p>
+              </div>
+              <div className="header__open-info-line-wrapper">
+                <p className="header__open-info-line">01603 488880</p>
+              </div>
+            </div>
+          </div>
+          <div className="header__open-links-container">
+            {media.map((link, i) => (
+              <div className="header__open-links-line-wrapper">
+                <div className={"header__open-links-line"}>
+                  <a
+                    key={i}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="header__open-links-link"
+                  >
+                    {link.name}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
