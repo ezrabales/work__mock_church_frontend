@@ -9,6 +9,10 @@ const PlanYourVisit = () => {
 
   useEffect(() => {
     setFooterBackgroundColor("#e8e1d8");
+
+    return () => {
+      setFooterBackgroundColor("#ffffff");
+    };
   }, []);
 
   return (
@@ -115,7 +119,7 @@ const PlanYourVisit = () => {
           btns={[
             { text: "email us", className: "visit__card-btn", follow: 0.3 },
             {
-              text: "email us",
+              text: "call us",
               className: "visit__card-btn-alternate",
               follow: 0.3,
             },

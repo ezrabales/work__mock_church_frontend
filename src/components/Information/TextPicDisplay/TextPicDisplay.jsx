@@ -31,7 +31,11 @@ const TextPicDisplay = ({
         {btns &&
           btns.map((btn, i) => {
             return (
-              <Btn className={btn.className} follow={0.5}>
+              <Btn
+                className={btn.className}
+                follow={0.5}
+                handleClick={btn.onClick}
+              >
                 {btn.text}
               </Btn>
             );

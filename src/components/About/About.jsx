@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./About.css";
 
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div className="about">
       <TextPicDisplay
@@ -34,7 +36,13 @@ const About = () => {
             guided by certain foundational beliefs and shaping values.
           </>
         }
-        btns={[{ text: "Learn More", className: "about__text-btn" }]}
+        btns={[
+          {
+            text: "Learn More",
+            className: "about__text-btn",
+            onClick: () => navigate("/beliefs"),
+          },
+        ]}
       />
       <TextPicDisplay
         title={
@@ -74,7 +82,12 @@ const About = () => {
           </>
         }
         descriptionClassName={"about__text-description"}
-        btns={[{ text: "Learn More", className: "about__text-btn" }]}
+        btns={[
+          {
+            text: "Learn More",
+            className: "about__text-btn",
+          },
+        ]}
       />
       <TextPicDisplay
         subtitle={"Our Leadership"}
@@ -96,6 +109,7 @@ const About = () => {
           {
             text: "See our leadership",
             className: "about__text-leadership-btn",
+            onClick: () => navigate("/leadership"),
           },
         ]}
         reverse

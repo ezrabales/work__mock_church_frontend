@@ -137,7 +137,11 @@ const CardSlider = ({ title, cards = [] }) => {
           <div key={i} className="cardSlider__card">
             <h3 className="cardSlider__card-title">{card.title}</h3>
             <p className="cardSlider__card-description">{card.description}</p>
-            <Btn className="cardSlider__card-btn" follow={0.2}>
+            <Btn
+              className="cardSlider__card-btn"
+              follow={0.2}
+              handleClick={card.onClick}
+            >
               {card.btn}
             </Btn>
           </div>

@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import CardSlider from "../Information/CardSlider/CardSlider";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./Connect.css";
 
 const Connect = () => {
+  const navigate = useNavigate();
   return (
     <div className="connect">
       <TextPicDisplay
@@ -79,7 +81,13 @@ const Connect = () => {
         description={
           "Whether you’re into sewing or cycling, curry or creative, there’s a group here for you. We have special interests, Bible study, social groups and more."
         }
-        btns={[{ text: "LEARN MORE", className: "connect__text-btn" }]}
+        btns={[
+          {
+            text: "LEARN MORE",
+            className: "connect__text-btn",
+            onClick: () => navigate("/groups"),
+          },
+        ]}
       />
       <TextPicDisplay
         reverse
@@ -92,7 +100,13 @@ const Connect = () => {
         description={
           "Serving on a team is the best way to meet people and put down roots. Whether you’re into tech, photography, building maintenance, admin or you’re a friendly face, we can help you find your perfect fit!"
         }
-        btns={[{ text: "LEARN MORE", className: "connect__text-btn" }]}
+        btns={[
+          {
+            text: "LEARN MORE",
+            className: "connect__text-btn",
+            onClick: () => navigate("/teams"),
+          },
+        ]}
       />
     </div>
   );

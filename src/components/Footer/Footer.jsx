@@ -80,7 +80,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Ezra Bales
+              Solid Rock Websites
             </a>
           </p>
         </div>

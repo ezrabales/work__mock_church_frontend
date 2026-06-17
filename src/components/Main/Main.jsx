@@ -2,8 +2,10 @@ import "./Main.css";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import CardSlider from "../Information/CardSlider/CardSlider";
 import OnPageForm from "../OnPageForm/OnPageForm";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
+  const navigate = useNavigate();
   return (
     <div className="main">
       <div className="main__hero-vid-container"></div>
@@ -29,7 +31,8 @@ const Main = () => {
                 us.
               </>
             ),
-            btn: "Learn more",
+            btn: "LEARN MORE",
+            onClick: () => navigate("/planYourVisit"),
           },
           {
             title: "Pastoral Care",
@@ -39,7 +42,7 @@ const Main = () => {
                 pray with you. Submit your prayer requests here.
               </>
             ),
-            btn: "Learn more",
+            btn: "EMAIL US",
           },
           {
             title: "Connect",
@@ -49,7 +52,8 @@ const Main = () => {
                 where you can connect with like-minded people.
               </>
             ),
-            btn: "Learn more",
+            btn: "LEARN MORE",
+            onClick: () => navigate("/connect"),
           },
           {
             title: "Grow",
@@ -60,7 +64,8 @@ const Main = () => {
                 too.
               </>
             ),
-            btn: "Learn more",
+            btn: "LEARN MORE",
+            onClick: () => navigate("/teams"),
           },
           {
             title: "Generations",
@@ -70,7 +75,8 @@ const Main = () => {
                 You’re never too young or too old to be part of SOUL Church!
               </>
             ),
-            btn: "Learn more",
+            btn: "LEARN MORE",
+            onClick: () => navigate("/groups"),
           },
           {
             title: "Foundation",
@@ -80,7 +86,7 @@ const Main = () => {
                 people in Norwich and showing them Jesus' love.
               </>
             ),
-            btn: "Learn more",
+            btn: "LEARN MORE",
           },
         ]}
       />

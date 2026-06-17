@@ -56,6 +56,11 @@
   width: fit-content;
 }
 
+.footer__link.active {
+  color: white;
+  font-weight: 700;
+}
+
 .footer__link::after {
   content: "";
   width: 0.35em;
