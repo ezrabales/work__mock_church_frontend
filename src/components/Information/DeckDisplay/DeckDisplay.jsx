@@ -60,7 +60,9 @@ const DeckDisplay = ({ title, cards }) => {
                 ))}
               </div>
             </div>
-            <div className="deck__card-pic">Picture</div>
+            <div className="deck__card-pic-container">
+              <img className={card.imgClassName} src={card.img} />
+            </div>
           </div>
         ))}
       </div>

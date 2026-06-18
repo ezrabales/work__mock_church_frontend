@@ -1,3 +1,18 @@
+import {
+  CareMinistryTeam,
+  churchTeams,
+  CommunityOutreachTeam,
+  EventSupportTeam,
+  FacilitiesTeam,
+  FirstImpressionsTeam,
+  HospitalityTeam,
+  KidsMinistryTeam,
+  ParkingTeam,
+  PhotographyAndMediaTeam,
+  PrayerTeam,
+  ProductionTeam,
+  WorshipTeam,
+} from "../../assets";
 import GridCardsDisplay from "../Information/GridCardsDisplay/GridCardsDisplay";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./Teams.css";
@@ -13,6 +28,7 @@ const Teams = () => {
             the church and the surrounding community.
           </>
         }
+        img={churchTeams}
       />
       <GridCardsDisplay
         title={"Our Teams"}
@@ -24,6 +40,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Sundays",
             time: "8:30AM",
+            img: HospitalityTeam,
           },
           {
             title: "Production Team",
@@ -32,6 +49,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Sundays",
             time: "8:00AM",
+            img: ProductionTeam,
           },
           {
             title: "Kids Ministry Team",
@@ -40,6 +58,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Sundays",
             time: "9:00AM",
+            img: KidsMinistryTeam,
           },
           {
             title: "Worship Team",
@@ -48,6 +67,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Thursdays",
             time: "6:30PM",
+            img: WorshipTeam,
           },
           {
             title: "Community Outreach Team",
@@ -56,6 +76,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Monthly",
             time: "Varies",
+            img: CommunityOutreachTeam,
           },
           {
             title: "Prayer Team",
@@ -64,6 +85,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Wednesdays",
             time: "6:30PM",
+            img: PrayerTeam,
           },
           {
             title: "First Impressions Team",
@@ -72,6 +94,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Sundays",
             time: "8:45AM",
+            img: FirstImpressionsTeam,
           },
           {
             title: "Parking Team",
@@ -80,6 +103,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Sundays",
             time: "8:15AM",
+            img: ParkingTeam,
           },
           {
             title: "Facilities Team",
@@ -88,6 +112,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Monthly",
             time: "9:00AM",
+            img: FacilitiesTeam,
           },
           {
             title: "Care Ministry Team",
@@ -96,6 +121,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Flexible",
             time: "Varies",
+            img: CareMinistryTeam,
           },
           {
             title: "Photography & Media Team",
@@ -104,6 +130,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "Sundays",
             time: "9:00AM",
+            img: PhotographyAndMediaTeam,
           },
           {
             title: "Event Support Team",
@@ -112,6 +139,7 @@ const Teams = () => {
             btn: "Join Team",
             date: "As Needed",
             time: "Varies",
+            img: EventSupportTeam,
           },
         ]}
       />

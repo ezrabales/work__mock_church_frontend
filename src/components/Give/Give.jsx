@@ -8,6 +8,12 @@ import GiveSelectInput from "./GiveSelectInput";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import Btn from "../Btn/Btn";
+import {
+  churchCeiling,
+  churchWorkers,
+  churchWorship,
+  givingFood,
+} from "../../assets";
 
 const Give = () => {
   const dateInputRef = useRef(null);
@@ -42,6 +48,7 @@ const Give = () => {
             part of all that He is doing in and through our church.
           </>
         }
+        img={churchWorkers}
       />
       <TextDisplay
         title={"Why we give"}
@@ -116,33 +123,7 @@ const Give = () => {
                 className: "deck__card-btn_transparent",
               },
             ],
-          },
-          {
-            title: (
-              <>
-                Give to <br /> SOUL Church
-              </>
-            ),
-            description: (
-              <>
-                We love the people of our city and we aim to keep our doors open
-                at least five days a week. We have toddler groups, wellbeing
-                groups, friendship groups and study groups among others. Church
-                is so much more than a Sunday service. Thanks for your support!
-              </>
-            ),
-            btns: [
-              {
-                content: "Learn More",
-                follow: 0.3,
-                className: "deck__card-btn",
-              },
-              {
-                content: "Give",
-                follow: 0.3,
-                className: "deck__card-btn_transparent",
-              },
-            ],
+            img: churchWorship,
           },
           {
             title: <>Our new home</>,
@@ -167,6 +148,7 @@ const Give = () => {
                 className: "deck__card-btn_transparent",
               },
             ],
+            img: churchCeiling,
           },
           {
             title: <>Soul Foundation</>,
@@ -194,6 +176,7 @@ const Give = () => {
                 className: "deck__card-btn_transparent",
               },
             ],
+            img: givingFood,
           },
         ]}
       />

@@ -7,7 +7,9 @@ const GridCardsDisplay = ({ cards, title }) => {
       <h2 className="grids__title">{title}</h2>
       {cards.map((card, i) => (
         <div className="grids__card">
-          <div className="grids__card-img-container">Image</div>
+          <div className="grids__card-img-container">
+            <img src={card.img} />
+          </div>
           <h3 className="grids__card-title">{card.title}</h3>
           <p className="grids__card-date">{card.date}</p>
           <p className="grids__card-time">{card.time}</p>

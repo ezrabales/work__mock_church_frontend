@@ -1,6 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./About.css";
+import {
+  churchManWorship,
+  oldCouplePhoto,
+  smallStartUpChurch,
+  teachingFromBible,
+} from "../../assets";
 
 const About = () => {
   const navigate = useNavigate();
@@ -21,6 +27,8 @@ const About = () => {
             Thankfully, we are a Jesus Church.
           </>
         }
+        img={churchManWorship}
+        imgClassName={"about__title-img"}
       />
       <TextPicDisplay
         title={
@@ -43,6 +51,8 @@ const About = () => {
             onClick: () => navigate("/beliefs"),
           },
         ]}
+        img={teachingFromBible}
+        imgClassName={"about__beliefs-img"}
       />
       <TextPicDisplay
         title={
@@ -88,6 +98,8 @@ const About = () => {
             className: "about__text-btn",
           },
         ]}
+        img={smallStartUpChurch}
+        imgClassName={"about__history-img"}
       />
       <TextPicDisplay
         subtitle={"Our Leadership"}
@@ -113,6 +125,8 @@ const About = () => {
           },
         ]}
         reverse
+        img={oldCouplePhoto}
+        imgClassName={"about__leadership-img"}
       />
     </div>
   );

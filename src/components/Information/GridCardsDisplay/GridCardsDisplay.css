@@ -33,6 +33,14 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.418);
 }
 
+.grids__card-img-container {
+  width: calc(100% + 40px);
+  max-height: 50%;
+  transform: translate(-20px, -20px);
+  border-radius: 50px 50px 30px 30px;
+  overflow: hidden;
+}
+
 .grids__card-title {
   font-weight: 600;
   font-size: 24px;
@@ -44,8 +52,14 @@
   font-size: 15px;
   font-family: "DM Sans";
   opacity: 0.75;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+}
+
+.grids__card-date {
+  margin-top: 10px;
+}
+
+.grids__card-time {
+  margin-bottom: 10px;
 }
 
 .grids__card-description {

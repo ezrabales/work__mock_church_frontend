@@ -1,3 +1,12 @@
+import {
+  chapelWorship,
+  churchLife,
+  churchSupportGroup,
+  kidsMinistry,
+  nurseryMinistry,
+  studentsGroup,
+  youthGroup,
+} from "../../assets";
 import DeckDisplay from "../Information/DeckDisplay/DeckDisplay";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./LifeInChurch.css";
@@ -20,6 +29,7 @@ const LifeInChurch = () => {
             Sundays and during the week.
           </>
         }
+        img={churchLife}
       />
       <DeckDisplay
         cards={[
@@ -48,6 +58,8 @@ const LifeInChurch = () => {
                 className: "life__card-btn-alternate",
               },
             ],
+            img: kidsMinistry,
+            imgClassName: "life__kids-img",
           },
           {
             title: "SOUL Youth",
@@ -71,6 +83,7 @@ const LifeInChurch = () => {
                 className: "life__card-btn-alternate",
               },
             ],
+            img: youthGroup,
           },
           {
             title: "SOUL Young Adults",
@@ -93,6 +106,7 @@ const LifeInChurch = () => {
                 className: "life__card-btn-alternate",
               },
             ],
+            img: studentsGroup,
           },
           {
             title: "SOUL Nursery",
@@ -115,6 +129,7 @@ const LifeInChurch = () => {
                 className: "life__card-btn-alternate",
               },
             ],
+            img: nurseryMinistry,
           },
           {
             title: "Chapel",
@@ -137,6 +152,8 @@ const LifeInChurch = () => {
                 className: "life__card-btn-alternate",
               },
             ],
+            img: chapelWorship,
+            imgClassName: "life__chapel-img",
           },
           {
             title: (
@@ -164,6 +181,7 @@ const LifeInChurch = () => {
                 className: "life__card-btn-alternate",
               },
             ],
+            img: churchSupportGroup,
           },
         ]}
       />

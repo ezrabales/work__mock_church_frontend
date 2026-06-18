@@ -3,6 +3,7 @@ import { useGlobal } from "../GlobalState/GlobalState";
 import DropDownListDisplay from "../Information/DropDownListDisplay/DropDownListDisplay";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./PlanYourVisit.css";
+import { accessibilityParking, churchGreeting } from "../../assets";
 
 const PlanYourVisit = () => {
   const { setFooterBackgroundColor } = useGlobal();
@@ -30,6 +31,7 @@ const PlanYourVisit = () => {
             on what you can expect when you join us at SOUL Church.
           </>
         }
+        img={churchGreeting}
       />
       <DropDownListDisplay
         title={"FAQS"}
@@ -124,6 +126,8 @@ const PlanYourVisit = () => {
               follow: 0.3,
             },
           ]}
+          img={accessibilityParking}
+          imgClassName={"visit__additional-needs-pic"}
         />
       </div>
     </div>

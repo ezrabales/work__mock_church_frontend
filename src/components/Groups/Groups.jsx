@@ -1,3 +1,18 @@
+import {
+  churchGroupJumping,
+  EquippingForPrayerAndIntercession,
+  Group6thAnd7thGradeGirls,
+  Group8thAnd9thGradeGirls,
+  GroupHighSchoolGirls,
+  GroupHighSchoolGuys,
+  GroupMiddleSchoolGuys,
+  MensWeeklyBreakfast,
+  MonthlyHomeGroup,
+  SermonBasedGroupMen,
+  TraditionalBibleStudy,
+  WednesdayPrayerGroup,
+  YoungAdultWomenSmallGroup,
+} from "../../assets";
 import GridCardsDisplay from "../Information/GridCardsDisplay/GridCardsDisplay";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./Groups.css";
@@ -14,6 +29,8 @@ const Groups = () => {
             groups and more.
           </>
         }
+        img={churchGroupJumping}
+        imgClassName={"groups__main-img"}
       />
       <GridCardsDisplay
         cards={[
@@ -24,6 +41,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Thursdays",
             time: "6:30AM",
+            img: SermonBasedGroupMen,
           },
           {
             title: "18|28 Young Adult Women Small Group",
@@ -32,6 +50,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Thursdays",
             time: "6:30PM",
+            img: YoungAdultWomenSmallGroup,
           },
           {
             title: "Equipping for Prayer and Intercession",
@@ -40,6 +59,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Thursdays",
             time: "6:30PM",
+            img: EquippingForPrayerAndIntercession,
           },
           {
             title: "Traditional Bible Study - Grimes",
@@ -48,6 +68,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Sundays",
             time: "9:30AM",
+            img: TraditionalBibleStudy,
           },
           {
             title: "Wednesday Prayer Group",
@@ -56,6 +77,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Wednesdays",
             time: "12:00PM",
+            img: WednesdayPrayerGroup,
           },
           {
             title: "Men's Weekly Breakfast - Ray Antwine",
@@ -64,6 +86,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Mondays",
             time: "8:00AM",
+            img: MensWeeklyBreakfast,
           },
           {
             title: "Monthly Home Group - Whitlow / Walker",
@@ -72,6 +95,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Last Sunday of the Month",
             time: "6:00PM",
+            img: MonthlyHomeGroup,
           },
           {
             title: "C|Y Group High School Girls",
@@ -80,6 +104,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
+            img: GroupHighSchoolGirls,
           },
           {
             title: "C|Y Group 6th & 7th Grade Girls",
@@ -88,6 +113,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
+            img: Group6thAnd7thGradeGirls,
           },
           {
             title: "C|Y Group 8th & 9th Grade Girls",
@@ -96,6 +122,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
+            img: Group8thAnd9thGradeGirls,
           },
           {
             title: "C|Y Group High School Guys",
@@ -104,6 +131,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
+            img: GroupHighSchoolGuys,
           },
           {
             title: "C|Y Group Middle School Guys",
@@ -112,6 +140,7 @@ const Groups = () => {
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
+            img: GroupMiddleSchoolGuys,
           },
         ]}
       />

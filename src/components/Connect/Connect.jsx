@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import CardSlider from "../Information/CardSlider/CardSlider";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./Connect.css";
+import { churchGroup, churchTeams, connectedGroup } from "../../assets";
 
 const Connect = () => {
   const navigate = useNavigate();
@@ -17,6 +18,7 @@ const Connect = () => {
         description={
           "Be part of the SOUL family – join a group and team and get connected today. "
         }
+        img={connectedGroup}
       />
       <CardSlider
         title={"New Here?"}
@@ -88,6 +90,7 @@ const Connect = () => {
             onClick: () => navigate("/groups"),
           },
         ]}
+        img={churchGroup}
       />
       <TextPicDisplay
         reverse
@@ -107,6 +110,8 @@ const Connect = () => {
             onClick: () => navigate("/teams"),
           },
         ]}
+        img={churchTeams}
+        imgClassName={"connect__img_reverse"}
       />
     </div>
   );

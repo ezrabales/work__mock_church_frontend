@@ -91,3 +91,12 @@
 .leader__member-description {
   letter-spacing: 0.025em;
 }
+
+.leader__main-pastors-pic {
+  margin-top: 200px;
+}
+
+.leader__pastor-img {
+  height: 50vh;
+  margin-left: 150px;
+}

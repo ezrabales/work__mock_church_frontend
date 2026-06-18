@@ -1,3 +1,4 @@
+import { bible } from "../../assets";
 import Btn from "../Btn/Btn";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import "./Beliefs.css";
@@ -127,6 +128,7 @@ const Beliefs = () => {
             guided by certain foundational beliefs and shaping values.
           </>
         }
+        img={bible}
       />
       <div className="beliefs__list-wrapper">
         <div className="beliefs__list">

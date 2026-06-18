@@ -3,12 +3,22 @@ import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
 import CardSlider from "../Information/CardSlider/CardSlider";
 import OnPageForm from "../OnPageForm/OnPageForm";
 import { useNavigate } from "react-router-dom";
+import { heroVideo, welcomingHug } from "../../assets";
 
 const Main = () => {
   const navigate = useNavigate();
   return (
     <div className="main">
-      <div className="main__hero-vid-container"></div>
+      <div className="main__hero-vid-container">
+        <video
+          className="main__hero-vid"
+          src={heroVideo}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      </div>
       <TextPicDisplay
         title={"Welcome Home"}
         description={
@@ -18,7 +28,7 @@ const Main = () => {
             here soon!
           </>
         }
-        img={true}
+        img={welcomingHug}
       />
       <CardSlider
         cards={[

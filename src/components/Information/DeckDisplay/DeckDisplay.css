@@ -36,6 +36,7 @@
 
   display: grid;
   grid-template-columns: 1.1fr 1fr;
+  gap: 10px;
 }
 
 .deck__card-text {
@@ -97,4 +98,13 @@
   background-color: rgb(70, 113, 255);
   border-color: rgb(17, 124, 211);
   color: #f8f6f6;
+}
+
+.deck__card-pic-container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  overflow: hidden;
+  border-radius: 20px;
+  max-height: 100%;
 }

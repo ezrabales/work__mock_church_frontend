@@ -1,5 +1,13 @@
 import "./Leadership.css";
 import TextPicDisplay from "../Information/TextPicDisplay/TextPicDisplay";
+import {
+  churchCouple0,
+  churchCouple1,
+  churchCouple2,
+  churchCouple3,
+  jesusSign,
+  oldCouplePhoto,
+} from "../../assets";
 
 const Leadership = () => {
   const pastors = [
@@ -14,6 +22,7 @@ const Leadership = () => {
           Seminary.
         </>
       ),
+      img: churchCouple0,
     },
     {
       title: "Brad + Brittany Jones",
@@ -26,6 +35,7 @@ const Leadership = () => {
           Addy.
         </>
       ),
+      img: churchCouple1,
     },
     {
       title: "Jonathan + Mary Pickens",
@@ -40,6 +50,7 @@ const Leadership = () => {
           the church.
         </>
       ),
+      img: churchCouple2,
     },
     {
       title: "Dan + Jo Watson",
@@ -54,6 +65,7 @@ const Leadership = () => {
           ministry before relocating to the United States.
         </>
       ),
+      img: churchCouple3,
     },
   ];
 
@@ -110,6 +122,7 @@ const Leadership = () => {
             people around.
           </>
         }
+        img={jesusSign}
       />
       <TextPicDisplay
         subtitle={"Our Leadership"}
@@ -125,6 +138,8 @@ const Leadership = () => {
             of Atlanta.
           </>
         }
+        img={oldCouplePhoto}
+        imgClassName={"leader__main-pastors-pic"}
       />
       <div className="leader__pastors-container">
         <h2 className="leader__pastors-title">Our Pastors</h2>
@@ -136,6 +151,8 @@ const Leadership = () => {
             titleClassName={"leader__pastor-title"}
             description={pastor.description}
             descriptionClassName={"leader__pastor-description"}
+            img={pastor.img}
+            imgClassName={"leader__pastor-img"}
           />
         ))}
       </div>

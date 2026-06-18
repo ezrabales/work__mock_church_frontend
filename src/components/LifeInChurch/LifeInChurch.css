@@ -35,3 +35,12 @@
   color: white;
   border: 0;
 }
+
+.life__kids-img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.life__chapel-img {
+  object-fit: cover;
+}

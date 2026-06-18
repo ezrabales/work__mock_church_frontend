@@ -1,6 +1,10 @@
 .about {
 }
 
+.about__title-img {
+  margin-top: 200px;
+}
+
 .about__text-title,
 .about__text-title_reverse {
   text-transform: uppercase;
@@ -54,4 +58,19 @@
   text-transform: uppercase;
   margin-left: auto;
   display: block;
+}
+
+.about__beliefs-img {
+  margin-left: 40px;
+  margin-top: 215px;
+}
+
+.about__history-img {
+  margin-left: 60px;
+  margin-top: 600px;
+}
+
+.about__leadership-img {
+  margin-left: 50px;
+  margin-top: 100px;
 }
