@@ -35,8 +35,13 @@ const Teams = () => {
         cards={[
           {
             title: "Hospitality Team",
-            description:
-              "Help create a warm and welcoming environment for every guest who walks through the doors. Serve alongside others to make people feel seen, valued, and at home.",
+            description: (
+              <>
+                Help create a warm and welcoming environment for every guest who
+                walks through the doors. Serve alongside others to make people
+                feel seen, valued, and at home.
+              </>
+            ),
             btn: "Join Team",
             date: "Sundays",
             time: "8:30AM",
@@ -44,8 +49,13 @@ const Teams = () => {
           },
           {
             title: "Production Team",
-            description:
-              "Support worship services through audio, lighting, video, and presentation technology. No experience is required—just a willingness to learn and serve.",
+            description: (
+              <>
+                Support worship services through audio, lighting, video, and
+                presentation technology. No experience is required—just a
+                willingness to learn and serve.
+              </>
+            ),
             btn: "Join Team",
             date: "Sundays",
             time: "8:00AM",
@@ -53,8 +63,12 @@ const Teams = () => {
           },
           {
             title: "Kids Ministry Team",
-            description:
-              "Invest in the next generation by creating a safe, fun, and engaging environment where children can learn about Jesus.",
+            description: (
+              <>
+                Invest in the next generation by creating a safe, fun, and
+                engaging environment where children can learn about Jesus.
+              </>
+            ),
             btn: "Join Team",
             date: "Sundays",
             time: "9:00AM",
@@ -62,8 +76,12 @@ const Teams = () => {
           },
           {
             title: "Worship Team",
-            description:
-              "Use your musical gifts to help lead the congregation in worship and create an atmosphere that points people toward God.",
+            description: (
+              <>
+                Use your musical gifts to help lead the congregation in worship
+                and create an atmosphere that points people toward God.
+              </>
+            ),
             btn: "Join Team",
             date: "Thursdays",
             time: "6:30PM",
@@ -71,8 +89,13 @@ const Teams = () => {
           },
           {
             title: "Community Outreach Team",
-            description:
-              "Serve local families and organizations through outreach projects, events, and practical acts of compassion throughout the community.",
+            description: (
+              <>
+                Serve local families and organizations through outreach
+                projects, events, and practical acts of compassion throughout
+                the community.
+              </>
+            ),
             btn: "Join Team",
             date: "Monthly",
             time: "Varies",
@@ -80,8 +103,12 @@ const Teams = () => {
           },
           {
             title: "Prayer Team",
-            description:
-              "Stand with others in prayer for the church, community, and individual needs while helping foster a culture of prayer.",
+            description: (
+              <>
+                Stand with others in prayer for the church, community, and
+                individual needs while helping foster a culture of prayer.
+              </>
+            ),
             btn: "Join Team",
             date: "Wednesdays",
             time: "6:30PM",
@@ -89,8 +116,13 @@ const Teams = () => {
           },
           {
             title: "First Impressions Team",
-            description:
-              "Be one of the first faces people see when they arrive. Help guests navigate the campus and feel welcomed from the moment they arrive.",
+            description: (
+              <>
+                Be one of the first faces people see when they arrive. Help
+                guests navigate the campus and feel welcomed from the moment
+                they arrive.
+              </>
+            ),
             btn: "Join Team",
             date: "Sundays",
             time: "8:45AM",
@@ -98,8 +130,12 @@ const Teams = () => {
           },
           {
             title: "Parking Team",
-            description:
-              "Assist with traffic flow, safety, and guest arrival to ensure a smooth and positive experience for everyone attending.",
+            description: (
+              <>
+                Assist with traffic flow, safety, and guest arrival to ensure a
+                smooth and positive experience for everyone attending.
+              </>
+            ),
             btn: "Join Team",
             date: "Sundays",
             time: "8:15AM",
@@ -107,8 +143,12 @@ const Teams = () => {
           },
           {
             title: "Facilities Team",
-            description:
-              "Help maintain and improve church facilities so ministry can happen effectively in a clean, safe, and welcoming environment.",
+            description: (
+              <>
+                Help maintain and improve church facilities so ministry can
+                happen effectively in a clean, safe, and welcoming environment.
+              </>
+            ),
             btn: "Join Team",
             date: "Monthly",
             time: "9:00AM",
@@ -116,8 +156,12 @@ const Teams = () => {
           },
           {
             title: "Care Ministry Team",
-            description:
-              "Support individuals and families through encouragement, prayer, visits, and practical care during difficult seasons.",
+            description: (
+              <>
+                Support individuals and families through encouragement, prayer,
+                visits, and practical care during difficult seasons.
+              </>
+            ),
             btn: "Join Team",
             date: "Flexible",
             time: "Varies",
@@ -125,8 +169,12 @@ const Teams = () => {
           },
           {
             title: "Photography & Media Team",
-            description:
-              "Capture stories of life change and ministry through photography, video, and creative content that inspires and informs.",
+            description: (
+              <>
+                Capture stories of life change and ministry through photography,
+                video, and creative content that inspires and informs.
+              </>
+            ),
             btn: "Join Team",
             date: "Sundays",
             time: "9:00AM",
@@ -134,8 +182,13 @@ const Teams = () => {
           },
           {
             title: "Event Support Team",
-            description:
-              "Help plan, set up, and execute church events that create opportunities for connection, discipleship, and community impact.",
+            description: (
+              <>
+                Help plan, set up, and execute church events that create
+                opportunities for connection, discipleship, and community
+                impact.
+              </>
+            ),
             btn: "Join Team",
             date: "As Needed",
             time: "Varies",

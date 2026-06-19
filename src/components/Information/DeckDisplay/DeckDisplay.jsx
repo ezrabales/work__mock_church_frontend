@@ -1,8 +1,20 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./DeckDisplay.css";
 import Btn from "../../Btn/Btn";
 
 const DeckDisplay = ({ title, cards }) => {
+  const [cardsStack, setCardsStack] = useState(true);
+  useEffect(() => {
+    const cards = document.querySelectorAll(".deck__card");
+
+    cards.forEach((card, i) => {
+      if (card.offsetHeight + 20 > window.innerHeight) {
+        setCardsStack(false);
+        return;
+      }
+    });
+  }, []);
+
   useEffect(() => {
     const cards = document.querySelectorAll(".deck__card");
 
@@ -37,20 +49,25 @@ const DeckDisplay = ({ title, cards }) => {
     <div className="deck">
       <h2 className="deck__title">{title}</h2>
       <div
-        className="deck-container"
+        className={`deck__container ${cardsStack ? "" : "deck__container_no-stack"}`}
         style={{ paddingBottom: `${cards.length * 50 + 100}px` }}
       >
         {cards.map((card, i) => (
           <div
             key={i}
             style={{
-              marginBottom: `-${10 + 1.8 * i}vh`,
-              top: `${10 + 1.8 * i}vh`,
+              marginBottom: `-${(window.innerWidth <= 768 ? 2 : 10) + 1.8 * i * (window.innerWidth <= 768 ? 0.5 : 1)}vh`,
+              top: `${(window.innerWidth <= 768 ? 2 : 10) + 1.8 * i * (window.innerWidth <= 768 ? 0.5 : 1)}vh`,
             }}
-            className="deck__card"
+            className={`deck__card ${cardsStack ? "" : "deck__card_no-stack"}`}
           >
             <div className="deck__card-text">
               <h3 className="deck__card-title">{card.title}</h3>
+              {window.innerWidth <= 768 && (
+                <div className="deck__card-pic-container">
+                  <img className={card.imgClassName} src={card.img} />
+                </div>
+              )}
               <p className="deck__card-description">{card.description}</p>
               <div className="deck__card-btn-container">
                 {card?.btns?.map((btn, j) => (
@@ -60,9 +77,11 @@ const DeckDisplay = ({ title, cards }) => {
                 ))}
               </div>
             </div>
-            <div className="deck__card-pic-container">
-              <img className={card.imgClassName} src={card.img} />
-            </div>
+            {window.innerWidth > 768 && (
+              <div className="deck__card-pic-container">
+                <img className={card.imgClassName} src={card.img} />
+              </div>
+            )}
           </div>
         ))}
       </div>

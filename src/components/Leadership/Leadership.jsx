@@ -8,67 +8,9 @@ import {
   jesusSign,
   oldCouplePhoto,
 } from "../../assets";
+import TextDisplay from "../Information/TextDisplay/TextDisplay";
 
 const Leadership = () => {
-  const pastors = [
-    {
-      title: "Ben + Donna Stuart",
-      description: (
-        <>
-          Ben Stuart is the pastor of Passion City Church, Washington D.C. Prior
-          to joining Passion City Church, Ben served as the executive director
-          of Breakaway Ministries on the campus of Texas A&amp;M. Ben earned a
-          master’s degree in historical theology from Dallas Theological
-          Seminary.
-        </>
-      ),
-      img: churchCouple0,
-    },
-    {
-      title: "Brad + Brittany Jones",
-      description: (
-        <>
-          Passion City Church 515 is pastored by Brad Jones. Together, he and
-          his wife Brittany have been a part of the Passion Movement for over a
-          decade helping carry the heartbeat of Passion Conference and Passion
-          City Church. They live in Atlanta with their two children, Caleb and
-          Addy.
-        </>
-      ),
-      img: churchCouple1,
-    },
-    {
-      title: "Jonathan + Mary Pickens",
-      description: (
-        <>
-          Jonathan Pickens serves as the Cumberland Location Pastor at Passion
-          City Church. He is passionate about helping people know, follow, and
-          enjoy Jesus. Jonathan graduated from the University of Georgia and
-          holds a Master’s in Historical Theology from Dallas Theological
-          Seminary. He and his wife, Mary, live in Marietta with their two
-          daughters, Rae and Merit. Together, Jonathan and Mary love building
-          the church.
-        </>
-      ),
-      img: churchCouple2,
-    },
-    {
-      title: "Dan + Jo Watson",
-      description: (
-        <>
-          Dan Watson serves as the Location Pastor at Passion City Church at
-          Trilith located in the greater Atlanta area. He and his wife, Jo, are
-          passionate about raising up the next generation of leaders and enjoy
-          traveling the globe inspiring people to live for the glory of God.
-          Married for over 15 years with four beautiful children, Dan and Jo are
-          originally from the United Kingdom where they pastored a thriving
-          ministry before relocating to the United States.
-        </>
-      ),
-      img: churchCouple3,
-    },
-  ];
-
   const board = [
     {
       title: "Billy Beacham",
@@ -116,7 +58,7 @@ const Leadership = () => {
         description={
           <>
             We may be biased, but we think we have the very best team of people
-            around leading our House week in and week out! Passion City Church
+            around leading our House week in and week out! DISPLAY&nbsp;CHURCH
             is led by Louie + Shelley Giglio, who are supported by an incredible
             team of some of the most gifted, creative, winsome and hard-working
             people around.
@@ -124,51 +66,44 @@ const Leadership = () => {
         }
         img={jesusSign}
       />
-      <TextPicDisplay
-        subtitle={"Our Leadership"}
-        title={"Louie + Shelley Giglio"}
-        description={
-          <>
-            Louie is the Visionary Architect and Director of the Passion
-            Movement, comprised of Passion Conferences, Passion City Church,
-            Passion Publishing and sixstepsrecords, and the founder of Passion
-            Global Institute. Shelley is the Chief Strategist, Director of Label
-            Operations and Artist Management for sixstepsrecords, co-founder of
-            the Passion Movement, and leads The GROVE, a gathering for the Women
-            of Atlanta.
-          </>
-        }
-        img={oldCouplePhoto}
-        imgClassName={"leader__main-pastors-pic"}
-      />
+
       <div className="leader__pastors-container">
-        <h2 className="leader__pastors-title">Our Pastors</h2>
-        {pastors.map((pastor, i) => (
-          <TextPicDisplay
-            key={i}
-            backgroundColor="#e8e1d8"
-            title={pastor.title}
-            titleClassName={"leader__pastor-title"}
-            description={pastor.description}
-            descriptionClassName={"leader__pastor-description"}
-            img={pastor.img}
-            imgClassName={"leader__pastor-img"}
-          />
-        ))}
+        <h2 className="leader__pastors-title">Leadership Team</h2>
+        <TextDisplay
+          description={
+            <>
+              We believe we are blessed with a dedicated team of leaders who
+              serve our house week after week.
+              <br />
+              <br />
+              Display Church is shepherded by a leadership team committed to our
+              mission: to Display Christ and equip His ambassadors. Our Lead
+              Pastors serve as the Visionary Architects of this movement,
+              supported by an incredible team of some of the most gifted,
+              creative, and hard-working people in our community.
+              <br />
+              <br />
+              Together, they guide our worship, discipleship, and service,
+              ensuring that every ministry point helps you live for Christ at
+              home, at work, and in the world.
+            </>
+          }
+        />
       </div>
       <div className="leader__board-container">
         <h2 className="leader__board-title">Our Board</h2>
         <p className="leader__board-description">
-          Passion, Inc. is governed by a board of directors made up of
-          individuals with a long history with the ministry of Passion. Their
+          DISPLAY&nbsp;CHURCH is governed by a board of directors made up of
+          individuals with a long history with the ministry of Christ. Their
           integrity, wisdom, experience and spiritual maturity are exceptional.
-          As well, they are fully engaged with all God is doing through Passion
-          to serve the collegiate generation and build up the local church. They
+          As well, they are fully engaged with all God is doing through the
+          Church to serve every generation and build up the local church. They
           prayerfully provide guidance and discernment for all that happens in
-          and through the ministries of Passion.
+          and through the ministries of DISPLAY&nbsp;CHURCH.
         </p>
         <p className="leader__board-subdescription">
-          Below is a list of the current members of the Passion Board.
+          Below is a list of the current members of the DISPLAY&nbsp;CHURCH
+          Board.
         </p>
         <div className="leader__board-members-container">
           {board.map((member, i) => (

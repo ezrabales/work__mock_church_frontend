@@ -8,7 +8,7 @@
 }
 
 .cardSlider__title {
-  padding: 0 0 40px 200px;
+  padding: 0 0 40px 12vw;
   font-size: 50px;
   font-size: 8.33em;
   font-weight: 700;
@@ -24,7 +24,7 @@
   user-select: none;
   -webkit-user-select: none;
   padding-bottom: 30px;
-  padding-left: 200px;
+  padding-left: clamp(20px, 8vw, 200px);
 }
 
 .cardSlider__card-container:active {
@@ -42,7 +42,7 @@
   color: black;
   padding: 40px;
   border-radius: 20px;
-  width: 300px;
+  width: min(300px, calc(100vw - 40px));
   display: flex;
   flex-direction: column;
   gap: 30px;

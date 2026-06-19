@@ -3,7 +3,7 @@
 }
 
 .visit__additional-needs-container {
-  padding: 120px;
+  padding: 10vw;
 }
 
 .visit__card-btn,
@@ -44,4 +44,16 @@
 .visit__additional-needs-pic {
   margin-left: 60px;
   margin-top: 200px;
+}
+
+@media (max-width: 768px) {
+  .visit__card-btn,
+  .visit__card-btn-alternate {
+    left: 0;
+    position: relative;
+    margin-top: 20px;
+  }
+  .visit__additional-needs-pic {
+    margin: 0;
+  }
 }

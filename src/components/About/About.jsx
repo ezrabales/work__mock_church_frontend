@@ -40,8 +40,8 @@ const About = () => {
         description={
           <>
             We live in shifting times but are rooted in eternal truths, the
-            teachings of Holy Scripture. Here at Passion City Church we are
-            guided by certain foundational beliefs and shaping values.
+            teachings of Holy Scripture. Here at DISPLAY CHURCH we are guided by
+            certain foundational beliefs and shaping values.
           </>
         }
         btns={[
@@ -63,32 +63,29 @@ const About = () => {
         titleClassName={"about__text-title"}
         description={
           <>
-            Passion City Church began with a stirring in the hearts of Louie and
-            Shelley Giglio for the local church. Born out of the Passion
-            Movement (a decades-old movement among the collegiate generation),
-            they sought to plant a local community of faith impacted and
-            informed by the DNA of Passion.
+            DISPLAY CHURCH began with a stirring in the hearts of Louie and
+            Shelley Giglio for the local church. Born out of a desire to become
+            and create ambassadors for Christ, they sought to plant a local
+            community of genuine believers rooted in scripture.
             <br />
             <br />
             With a small team of people, that vision took flight in 2008, as
-            small gatherings began in homes throughout Atlanta. The desire was
+            small gatherings began in homes throughout Kalispell. The desire was
             to foster a family of believers connected by a common faith, on
-            mission in the city and the world to amplify the name of Jesus.
+            mission in the city and the world to represent the name of Jesus.
             <br />
             <br />
             And that’s exactly what happened. Our first gathering was held on
-            February 15, 2009, in Atlanta at The Tabernacle. From there, God
-            faithfully provided, as our little tribe met at various locations
-            all over the city of Atlanta until we landed in our first permanent
-            gathering site at 515 Garson Drive. Since then we’ve added locations
-            in the Cumberland and Trilith areas of Atlanta and a location in
-            Washington D.C. whose weekly gatherings started in April of 2018.
+            February 15, 2009, in Kalispell at Flathead High School. From there,
+            God faithfully provided, as our little tribe met at various
+            locations all over the city of Kalispell until we landed in our
+            first permanent gathering site at Some St.
             <br />
             <br />
-            Passion City Church remains a place where the gospel is central and
-            Jesus is always the lead story. We are a Jesus church and want to
-            gather in worship and scatter to shine His light and love throughout
-            the city and beyond.
+            DISPLAY CHURCH remains a place where the gospel is central and Jesus
+            is always the lead story. We are a Jesus church and want to gather
+            in worship and scatter to shine His light and love throughout the
+            city and beyond.
           </>
         }
         descriptionClassName={"about__text-description"}
@@ -113,8 +110,8 @@ const About = () => {
         description={
           <>
             We live in shifting times but are rooted in eternal truths, the
-            teachings of Holy Scripture. Here at Passion City Church we are
-            guided by certain foundational beliefs and shaping values.
+            teachings of Holy Scripture. Here at DISPLAY CHURCH we are guided by
+            certain foundational beliefs and shaping values.
           </>
         }
         btns={[

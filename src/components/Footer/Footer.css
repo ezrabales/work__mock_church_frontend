@@ -19,12 +19,24 @@
 }
 
 .footer__logo-container {
-  width: 150px;
-  height: 150px;
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 150px;
+  max-height: 150px;
   border-radius: 50%;
   background-color: grey;
+  color: white;
   margin: 80px;
   margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo-text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 25px;
 }
 
 .footer__creater-link {
@@ -133,5 +145,32 @@
 
   100% {
     opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 60px 4vw;
+  }
+  .footer__left {
+    flex-direction: column;
+  }
+  .footer__logo-container {
+    margin: auto;
+  }
+  .footer__column {
+    justify-content: center;
+    align-items: center;
+  }
+  .footer__title {
+    margin-top: 30px;
+  }
+  .footer__text {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer__right {
+    margin: auto;
   }
 }

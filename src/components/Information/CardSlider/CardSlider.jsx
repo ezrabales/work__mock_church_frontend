@@ -91,7 +91,7 @@ const CardSlider = ({ title, cards = [] }) => {
     const offset = parseFloat(getComputedStyle(el).paddingLeft) || 0;
     const index = Math.round((el.scrollLeft - offset) / unit);
     const clamped = Math.max(0, Math.min(index, cards.length - 1));
-    const target = offset - marginLeft + clamped * unit;
+    const target = offset + clamped * unit;
 
     if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
 

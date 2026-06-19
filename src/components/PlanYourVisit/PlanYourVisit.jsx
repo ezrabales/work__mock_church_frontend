@@ -28,7 +28,7 @@ const PlanYourVisit = () => {
           <>
             Whoever you are and wherever you’re from, we want you to feel at
             home from the moment you walk through the door. So here’s some info
-            on what you can expect when you join us at SOUL Church.
+            on what you can expect when you join us at DISPLAY CHURCH.
           </>
         }
         img={churchGreeting}
@@ -40,12 +40,12 @@ const PlanYourVisit = () => {
             title: "What will happen my first time?",
             description: (
               <>
-                When you turn into Mason Road, our friendly Arrivals Team will
+                When you turn into Some St., our friendly Arrivals Team will
                 show you to a suitable parking space (Blue badge parking
-                available). When you come in to SOUL&nbsp;Church, you'll see our
-                cafe and a central atrium where people can hang out and chat.
-                From here, you can check your kids in to their age groups and
-                come into the main auditorium for the service. Our Host Team
+                available). When you come in to DISPLAY&nbsp;CHURCH, you'll see
+                our cafe and a central atrium where people can hang out and
+                chat. From here, you can check your kids in to their age groups
+                and come into the main auditorium for the service. Our Host Team
                 will be waiting to show you to your seat. Our services usually
                 last around 90 minutes, and include worship, prayer and a
                 message. We have a family room for those with babies and
@@ -79,8 +79,8 @@ const PlanYourVisit = () => {
                 area for breastfeeding if you prefer. Our kids' programme runs
                 throughout the service for those aged 3-11 and our youth
                 programme usually runs at the 9am and 11am services for high
-                school ages. SOUL&nbsp;Youth also runs on Friday nights during
-                term time, from 7-9pm.
+                school ages. Youth&nbsp;Ministry also runs on Friday nights
+                during term time, from 7-9pm.
               </>
             ),
           },
@@ -90,12 +90,12 @@ const PlanYourVisit = () => {
               <>
                 We do have loud music and flashing lights at our services and we
                 know this won't work for every child. We have a dedicated
-                sensory room for our SOUL&nbsp;Champions, and we offer ear
+                sensory room for our DISPLAY&nbsp;Champions, and we offer ear
                 defenders to those who might otherwise feel overwhelmed. Our
                 kids' team are experienced in dealing with children with
                 additional needs and we'll work with you to make sure your child
                 feels safe and settled in this new environment. If you've got
-                any questions, please drop us a line at info@soulchurch.com.
+                any questions, please drop us a line at info@displaychurch.com.
               </>
             ),
           },
@@ -115,7 +115,7 @@ const PlanYourVisit = () => {
               We have accessible parking on site and all public areas of the
               building are on the ground floor with no steps. We have facilities
               for those with sensory issues too. And there's a dedicated private
-              breastfeeding room.{" "}
+              breastfeeding room.
             </>
           }
           btns={[

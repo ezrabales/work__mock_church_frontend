@@ -23,9 +23,10 @@ const Main = () => {
         title={"Welcome Home"}
         description={
           <>
-            Church name is a vibrant and friendly church in the beautiful town
-            of Kalispell. We love Jesus and we love people. We'd love to see you
-            here soon!
+            Display Church is a vibrant Christ-centered community where we love
+            Jesus and love people. As ambassadors of His kingdom, we are
+            dedicated to displaying Christ in our everyday lives. We'd love to
+            see you here soon as we live out our mission together.
           </>
         }
         img={welcomingHug}
@@ -36,9 +37,8 @@ const Main = () => {
             title: "Services",
             description: (
               <>
-                With accessible parking, a SEN room and more, everyone is
-                welcome. Click below to find out what to expect when you visit
-                us.
+                Everyone is invited to experience Jesus in our welcoming space.
+                Learn what to expect when you visit us.
               </>
             ),
             btn: "LEARN MORE",
@@ -69,9 +69,9 @@ const Main = () => {
             title: "Grow",
             description: (
               <>
-                We love our amazing Dream Team! There are so many opportunities
-                at SOUL for volunteers – and it’s a great way to meet people
-                too.
+                Serve as an ambassador for Christ and actively participate in
+                the mission on our volenteer team. It's also a great way to meet
+                new people.
               </>
             ),
             btn: "LEARN MORE",
@@ -82,7 +82,8 @@ const Main = () => {
             description: (
               <>
                 From tots to teens and beyond, we have groups for every age.
-                You’re never too young or too old to be part of SOUL Church!
+                You’re never too young or too old to be part of
+                DISPLAY&nbsp;CHURCH!
               </>
             ),
             btn: "LEARN MORE",
@@ -92,8 +93,8 @@ const Main = () => {
             title: "Foundation",
             description: (
               <>
-                SOUL Foundation is our outreach arm, meeting the needs of the
-                people in Norwich and showing them Jesus' love.
+                DISPLAY Foundation is our outreach arm, meeting the needs of the
+                people in Kalispell and the valley by showing them Jesus' love.
               </>
             ),
             btn: "LEARN MORE",
@@ -104,8 +105,7 @@ const Main = () => {
         <p className="main__form-subtitle">Sign Up</p>
         <h2 className="main__form-title">Stay up to date</h2>
         <p className="main__form-description">
-          Sign up below for the latest news and updates from Passion City
-          Church.
+          Sign up below for the latest news and updates from Display Church.
         </p>
         <OnPageForm
           inputs={[

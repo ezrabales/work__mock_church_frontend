@@ -66,16 +66,12 @@ const Header = () => {
       Math.hypot(window.innerWidth - cx, window.innerHeight - cy), // bottom-right
     ];
 
-    const maxDistance = Math.max(...distances);
-
-    // circle radius before scaling
-    const radius = rect.width / 2;
-
-    const scale = maxDistance / radius + 7;
-
     if (menuIsOpening) {
       // opening
-      el.style.transform = `scale(${scale})`;
+      const diagonal = Math.hypot(window.innerWidth, window.innerHeight);
+      const scale = diagonal / Math.min(rect.width, rect.height);
+
+      el.style.transform = `scale(${scale * (window.innerWidth <= 1024 ? 2 : 1.2)})`;
       el.style.opacity = "1";
       el.style.backgroundColor = "rgb(215, 200, 177)";
     } else if (menuIsOpen) {
@@ -124,7 +120,7 @@ const Header = () => {
           to={"/"}
           className={`glass header__logo-container ${menuIsOpening || menuIsOpen ? "header__logo-container_open" : ""}`}
         >
-          Church
+          DISPLAY CHURCH
         </NavLink>
       </div>
       <button
@@ -158,7 +154,7 @@ const Header = () => {
         <div className="header__open-left">
           <div className="header__open-links-container">
             {links.map((link, i) => (
-              <div className="header__open-link-wrapper">
+              <div key={i} className="header__open-link-wrapper">
                 <NavLink
                   to={link.to}
                   className={"header__open-link"}
@@ -169,56 +165,84 @@ const Header = () => {
               </div>
             ))}
           </div>
-          <span className="header__open-border" />
+          {window.innerWidth > 768 && <span className="header__open-border" />}
         </div>
-        <div className="header__open-right">
-          <div className="header__open-info-container">
-            <div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">Address:</p>
-              </div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">SOUL CHURCH</p>
-              </div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">4 Mason Rd, NR6 6RF</p>
-              </div>
-            </div>
-            <div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">Email:</p>
-              </div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">info@soulchurch.com</p>
-              </div>
-            </div>
-            <div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">Call:</p>
-              </div>
-              <div className="header__open-info-line-wrapper">
-                <p className="header__open-info-line">01603 488880</p>
-              </div>
-            </div>
-          </div>
-          <div className="header__open-links-container">
-            {media.map((link, i) => (
-              <div className="header__open-links-line-wrapper">
-                <div className={"header__open-links-line"}>
-                  <a
-                    key={i}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="header__open-links-link"
-                  >
-                    {link.name}
-                  </a>
+        {window.innerWidth > 768 ? (
+          <div className="header__open-right">
+            <div className="header__open-info-container">
+              <div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">Address:</p>
+                </div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">SOUL CHURCH</p>
+                </div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">4 Mason Rd, NR6 6RF</p>
                 </div>
               </div>
-            ))}
+              <div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">Email:</p>
+                </div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">info@soulchurch.com</p>
+                </div>
+              </div>
+              <div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">Call:</p>
+                </div>
+                <div className="header__open-info-line-wrapper">
+                  <p className="header__open-info-line">01603 488880</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="header__open-links-container">
+              {media.map((link, i) => (
+                <div key={i} className="header__open-links-line-wrapper">
+                  <div className={"header__open-links-line"}>
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="header__open-links-link"
+                    >
+                      {link.name}
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="header__open-right">
+            <div className="header__open-links-container-small">
+              {media.map((link, i) => {
+                const Icon = link.icon;
+                return (
+                  <div key={i} className="header__open-links-wrapper-small">
+                    <div
+                      className={"header__open-links-small"}
+                      style={{ transition: `transform ${0.2 + i / 13}s ease` }}
+                    >
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="header__open-links-link"
+                        onClick={() => toggleMenuOpen()}
+                      >
+                        <Icon size={window.innerWidth <= 768 ? 32 : 40} />
+                      </a>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

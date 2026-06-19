@@ -93,10 +93,10 @@ const Beliefs = () => {
       title: "His Renown",
       description: (
         <>
-          We echo and affirm the Westminster confession:{" "}
+          We echo and affirm the Westminster confession:
           <em>
             "the chief end of man is to glorify God and enjoy Him forever."
-          </em>{" "}
+          </em>
           All things exist for the glory of God.
         </>
       ),
@@ -124,7 +124,7 @@ const Beliefs = () => {
         description={
           <>
             We live in shifting times but are rooted in eternal truths, the
-            teachings of Holy Scripture. Here at Passion City Church we are
+            teachings of Holy Scripture. Here at DISPLAY&nbsp;CHURCH we are
             guided by certain foundational beliefs and shaping values.
           </>
         }

@@ -4,7 +4,7 @@
 .main__hero-vid-container {
   border-radius: 20px;
   height: 70vh;
-  margin: 40px 120px;
+  margin: 40px 10vw;
   overflow: hidden;
 }
 
@@ -36,9 +36,17 @@
 .main__form-title {
   font-size: 4rem;
   line-height: 1;
+  text-align: center;
 }
 
 .main__form-description {
   font-size: 1.5rem;
   line-height: 1.75rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main__hero-vid-container {
+    margin: 40px 20px;
+  }
 }

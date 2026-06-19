@@ -38,6 +38,8 @@
   z-index: 1;
   pointer-events: auto;
   opacity: 1;
+  text-align: center;
+  font-weight: 700;
   transition:
     opacity 0.4s ease,
     box-shadow 0.5s ease,
@@ -331,6 +333,7 @@
   padding: 0 30px;
   position: relative;
   transform: translateY(100%);
+  width: fit-content;
   transition:
     padding-left 0.3s ease,
     transform 0.4s ease;
@@ -345,14 +348,11 @@
   content: "";
   width: 0;
   height: 0;
-  border-radius: 50%;
   background-color: black;
   display: block;
   position: absolute;
-  top: 57%;
-  left: 7%;
-  transform: translate(50%, -50%);
-  transition: all 0.3s ease;
+  bottom: 0;
+  transition: width 0.5s ease;
 }
 
 .header__open-link:hover,
@@ -362,9 +362,9 @@
 
 .header__open-link:hover::after,
 .header__open-link.active::after {
-  width: 30px;
-  height: 30px;
-  left: 0;
+  width: calc(100% - 90px);
+  height: 0.5vw;
+  border-radius: 20px;
 }
 
 .header__open-link.active {
@@ -387,6 +387,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: calc(100% - 80px);
 }
 
 .header__open-info-line-wrapper {
@@ -403,7 +404,7 @@
   font-size: 1.4em;
   font-weight: 600;
   line-height: 1.32;
-  transform: translateY(25px);
+  transform: translateY(100%);
   transition: transform 0.3s ease;
 }
 
@@ -452,4 +453,63 @@
   background-color: transparent;
   border: 1px solid black;
   left: 50%;
+}
+
+@media (max-width: 768px) {
+  .header__open-background,
+  .header__menu-container {
+    top: 30px;
+    right: 30px;
+  }
+  .header__logo-container {
+    top: 20px;
+    left: 20px;
+  }
+  .header__open-right {
+    padding: 6vw;
+  }
+  .header__open-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .header__open-link {
+    font-size: 12vw;
+  }
+  .header__open-info-container,
+  .header__open-links-container {
+    margin-top: 10px;
+    width: 100%;
+    padding: 0 60px 0 20px;
+  }
+}
+
+@media (max-height: 425px) {
+  .header__open-right {
+    padding: 2vw 6vw 6vw 6vw;
+  }
+  .header__open-link {
+    font-size: 6vw;
+  }
+}
+
+.header__open-links-container-small {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header__open-links-small {
+  background-color: white;
+  padding: 5px;
+  border-radius: 50%;
+  border: 2px solid black;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+
+.header__open-container_open .header__open-links-small,
+.header__open-container_opening .header__open-links-small {
+  transform: translateY(0);
 }

@@ -33,11 +33,17 @@ const Groups = () => {
         imgClassName={"groups__main-img"}
       />
       <GridCardsDisplay
+        title={"Our Groups"}
         cards={[
           {
             title: "Sermon Based Group - Men - Antwine",
-            description:
-              "Join other men for meaningful discussion and practical application of recent sermons. Grow in faith, accountability, and biblical community together.",
+            description: (
+              <>
+                Join other men for meaningful discussion and practical
+                application of recent sermons. Grow in faith, accountability,
+                and biblical community together.
+              </>
+            ),
             btn: "Register Here",
             date: "Thursdays",
             time: "6:30AM",
@@ -45,8 +51,13 @@ const Groups = () => {
           },
           {
             title: "18|28 Young Adult Women Small Group",
-            description:
-              "A welcoming community for young adult women to build friendships, study Scripture, and encourage one another through life's challenges.",
+            description: (
+              <>
+                A welcoming community for young adult women to build
+                friendships, study Scripture, and encourage one another through
+                life's challenges.
+              </>
+            ),
             btn: "Register Here",
             date: "Thursdays",
             time: "6:30PM",
@@ -54,8 +65,12 @@ const Groups = () => {
           },
           {
             title: "Equipping for Prayer and Intercession",
-            description:
-              "Learn how to develop a deeper prayer life while growing in confidence and effectiveness as an intercessor for others.",
+            description: (
+              <>
+                Learn how to develop a deeper prayer life while growing in
+                confidence and effectiveness as an intercessor for others.
+              </>
+            ),
             btn: "Register Here",
             date: "Thursdays",
             time: "6:30PM",
@@ -63,8 +78,12 @@ const Groups = () => {
           },
           {
             title: "Traditional Bible Study - Grimes",
-            description:
-              "Dive deeper into God's Word through verse-by-verse study and engaging discussion in a traditional classroom-style setting.",
+            description: (
+              <>
+                Dive deeper into God's Word through verse-by-verse study and
+                engaging discussion in a traditional classroom-style setting.
+              </>
+            ),
             btn: "Register Here",
             date: "Sundays",
             time: "9:30AM",
@@ -72,8 +91,13 @@ const Groups = () => {
           },
           {
             title: "Wednesday Prayer Group",
-            description:
-              "Gather weekly to pray for the church, community, and personal needs while strengthening your relationship with God through prayer.",
+            description: (
+              <>
+                Gather weekly to pray for the church, community, and personal
+                needs while strengthening your relationship with God through
+                prayer.
+              </>
+            ),
             btn: "Register Here",
             date: "Wednesdays",
             time: "12:00PM",
@@ -81,8 +105,12 @@ const Groups = () => {
           },
           {
             title: "Men's Weekly Breakfast - Ray Antwine",
-            description:
-              "Start your week with fellowship, encouragement, and meaningful conversation over breakfast with other men.",
+            description: (
+              <>
+                Start your week with fellowship, encouragement, and meaningful
+                conversation over breakfast with other men.
+              </>
+            ),
             btn: "Register Here",
             date: "Mondays",
             time: "8:00AM",
@@ -90,8 +118,12 @@ const Groups = () => {
           },
           {
             title: "Monthly Home Group - Whitlow / Walker",
-            description:
-              "Connect with others in a relaxed home environment focused on friendship, faith, and authentic community.",
+            description: (
+              <>
+                Connect with others in a relaxed home environment focused on
+                friendship, faith, and authentic community.
+              </>
+            ),
             btn: "Register Here",
             date: "Last Sunday of the Month",
             time: "6:00PM",
@@ -99,8 +131,12 @@ const Groups = () => {
           },
           {
             title: "C|Y Group High School Girls",
-            description:
-              "A safe and encouraging space for high school girls to grow in their faith, friendships, and understanding of God's Word.",
+            description: (
+              <>
+                A safe and encouraging space for high school girls to grow in
+                their faith, friendships, and understanding of God's Word.
+              </>
+            ),
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
@@ -108,8 +144,12 @@ const Groups = () => {
           },
           {
             title: "C|Y Group 6th & 7th Grade Girls",
-            description:
-              "Middle school girls can build lasting friendships, have fun, and discover how faith applies to everyday life.",
+            description: (
+              <>
+                Middle school girls can build lasting friendships, have fun, and
+                discover how faith applies to everyday life.
+              </>
+            ),
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
@@ -117,8 +157,12 @@ const Groups = () => {
           },
           {
             title: "C|Y Group 8th & 9th Grade Girls",
-            description:
-              "Designed for young women navigating the transition into high school while growing in Christ-centered relationships.",
+            description: (
+              <>
+                Designed for young women navigating the transition into high
+                school while growing in Christ-centered relationships.
+              </>
+            ),
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
@@ -126,8 +170,12 @@ const Groups = () => {
           },
           {
             title: "C|Y Group High School Guys",
-            description:
-              "A place for high school guys to strengthen their faith, build character, and connect with peers who share their values.",
+            description: (
+              <>
+                A place for high school guys to strengthen their faith, build
+                character, and connect with peers who share their values.
+              </>
+            ),
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",
@@ -135,8 +183,12 @@ const Groups = () => {
           },
           {
             title: "C|Y Group Middle School Guys",
-            description:
-              "Middle school boys can grow in their relationship with Christ while building friendships through discussion and activities.",
+            description: (
+              <>
+                Middle school boys can grow in their relationship with Christ
+                while building friendships through discussion and activities.
+              </>
+            ),
             btn: "Register Here",
             date: "Wednesdays",
             time: "6:30PM",

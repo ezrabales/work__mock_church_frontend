@@ -49,12 +49,14 @@ const Give = () => {
           </>
         }
         img={churchWorkers}
+        imgClassName={"give__title-img"}
       />
       <TextDisplay
         title={"Why we give"}
         description={
           <>
-            At Church, we don’t say, “we’re going to take the offering”. <br />
+            At DISPLAY CHURCH, we don’t say, “we’re going to take the offering”.{" "}
+            <br />
             <br />
             Simply stated: God is not a taker. God is a giver. So we give the
             offering. <br />
@@ -68,9 +70,8 @@ const Give = () => {
             <br />
             So in response to all He’s done we say, “God I want the world to
             know about Jesus. So I’m going to give into our House. I’m going to
-            give into Passion City Church because I believe here my money will
-            be multiplied to help the city and the world come to know Jesus.{" "}
-            <br />
+            give into DISPLAY CHURCH because I believe here my money will be
+            multiplied to help the city and the world come to know Jesus. <br />
             <br />
             At the end of the day, when I stand in heaven I’m going to know that
             money wasn’t lost. That money was gained because it multiplied
@@ -90,7 +91,7 @@ const Give = () => {
             <br />
             For Jesus! <br />
             <br />
-            Pastor
+            Pastor Louie
           </>
         }
       />
@@ -100,7 +101,7 @@ const Give = () => {
           {
             title: (
               <>
-                Give to <br /> SOUL Church
+                Give to <br /> DISPLAY CHURCH
               </>
             ),
             description: (
@@ -129,11 +130,11 @@ const Give = () => {
             title: <>Our new home</>,
             description: (
               <>
-                We’re building a home for the people of Norwich, where everyone
-                is welcome. It will be a valuable community asset as well as the
-                place we gather as a church. There will be a nursery, soft play,
-                a café, meeting rooms, our social supermarket, sports
-                facilities, and plenty more.
+                A permanent home for the people of Kalispell, where everyone is
+                welcome. It will be a valuable community asset as well as the
+                place we gather as a church. There will be a nursery, a café,
+                meeting rooms, our social supermarket, sports facilities, and
+                plenty more.
               </>
             ),
             btns: [
@@ -151,17 +152,13 @@ const Give = () => {
             img: churchCeiling,
           },
           {
-            title: <>Soul Foundation</>,
+            title: <>Ambassadors Outreach</>,
             description: (
               <>
-                We support a number of initiatives in Norwich and further
-                afield, feeding the homeless, offering education and medicine to
-                those overseas, and so much more, as well as running a social
-                supermarket from our church site.
-                <br />
-                <br />
-                You can find out more about these initiatives on our dedicated
-                SOUL Foundation site. Together, we can change lives!
+                We support a number of initiatives in the valley, feeding the
+                homeless, offering education and medicine to those overseas, and
+                so much more, as well as running a social supermarket from our
+                church site.
               </>
             ),
             btns: [
@@ -202,7 +199,11 @@ const Give = () => {
             input={{
               name: "fund",
               placeholder: "Fund",
-              options: ["one", "two", "three"],
+              options: [
+                "DISPLAY CHURCH",
+                "Our new home",
+                "Ambassadors Outreach",
+              ],
             }}
           />
           <label className="give__fund-label">

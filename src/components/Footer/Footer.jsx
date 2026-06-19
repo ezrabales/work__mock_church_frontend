@@ -36,6 +36,7 @@ const Footer = () => {
   }, [location.pathname]);
 
   useEffect(() => {
+    const threshold = window.innerWidth <= 768 ? 0.1 : 0.7;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -43,7 +44,7 @@ const Footer = () => {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.7 },
+      { threshold },
     );
 
     if (footerRef.current) {
@@ -60,17 +61,19 @@ const Footer = () => {
       style={{ backgroundColor }}
     >
       <div className="footer__left">
-        <div className="footer__logo-container"></div>
+        <NavLink to={"/"} className="footer__logo-container">
+          <p className="footer__logo-text">DISPLAY CHURCH</p>
+        </NavLink>
 
         {/* CONTACT US */}
         <div className="footer__column">
           <h3 className="footer__title">CONTACT US</h3>
           <p className="footer__text">
-            SOUL CHURCH <br /> 4 Mason Rd, NR6 6RF
+            DISPLAY CHURCH <br /> Some St. Kalispell, MT
             <br />
-            info@soulchurch.com
+            info@displaychurch.com
             <br />
-            01234 567890
+            406-123-4567
           </p>
           <p className="footer__text">
             Made by: <br />
@@ -115,8 +118,8 @@ const Footer = () => {
         <div className="footer__column">
           <h3 className="footer__title">STAY TUNED</h3>
           <p className="footer__text">
-            Sign up for our newsletter to find out more about what's happening
-            at SOUL Church!
+            Sign up for our newsletter to find out more about how we are
+            displaying Christ and making a difference at DISPLAY CHURCH!
           </p>
           <FooterForm
             inputs={[

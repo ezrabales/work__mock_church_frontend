@@ -4,3 +4,9 @@
 .groups__main-img {
   margin-top: 80px;
 }
+
+@media (max-width: 768px) {
+  .groups__main-img {
+    margin: 0;
+  }
+}

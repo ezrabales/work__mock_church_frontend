@@ -50,3 +50,10 @@
   background-color: #e8e1d8;
   color: rgb(63, 152, 230);
 }
+
+@media (max-width: 768px) {
+  .beliefs__btn {
+    margin: auto;
+    max-width: 95vw;
+  }
+}

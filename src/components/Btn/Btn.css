@@ -2,7 +2,9 @@
   padding: 1em 2.12em;
   background-color: #e8e1d8;
   border-radius: 20px;
-  transition: all 0.1s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease;
   text-align: center;
   font-size: 1.19em;
   font-weight: 700;
@@ -11,4 +13,8 @@
 
 .btn:hover {
   background-color: white;
+}
+
+.btn:active {
+  scale: 0.95;
 }

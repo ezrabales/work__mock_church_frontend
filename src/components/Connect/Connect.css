@@ -6,12 +6,11 @@
   text-transform: uppercase;
   font-family: "Oswald";
   font-size: 12em;
-  line-height: 0.8;
   position: relative;
   font-weight: 900;
   letter-spacing: -0.9rem;
   line-height: 12rem;
-  margin-bottom: 180px;
+  margin-bottom: 12vw;
 }
 
 .connect__text-title_reverse {
@@ -38,4 +37,19 @@
 .connect__img_reverse {
   margin-top: 30%;
   padding: 20px;
+}
+
+@media (max-width: 1024px) {
+  .connect__img_reverse {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .connect__text-title,
+  .connect__text-title_reverse {
+    font-size: 70px;
+    letter-spacing: 0.5rem;
+    line-height: 1;
+  }
 }

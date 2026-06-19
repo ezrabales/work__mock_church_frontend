@@ -9,21 +9,26 @@
   font-size: 8.33em;
   font-weight: 700;
   line-height: 0.85;
-  margin: 0 0 1.2em 1em;
+  margin: 0 0 6vw 7vw;
 }
 
-.deck-container {
+.deck__container {
   padding: 60px 0 0;
   display: flex;
   flex-direction: column;
   gap: 300px;
 }
 
+.deck__container_no-stack {
+  gap: 100px;
+}
+
 .deck__card {
   position: sticky;
 
   width: 65em;
-  height: 35em;
+  max-width: 90vw;
+  min-height: 35em;
   margin: 0 auto 2rem;
   padding: 3.11em;
 
@@ -37,6 +42,10 @@
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 10px;
+}
+
+.deck__card_no-stack {
+  position: relative;
 }
 
 .deck__card-text {
@@ -105,6 +114,48 @@
   justify-content: center;
   align-self: center;
   overflow: hidden;
+  max-height: 50vh;
   border-radius: 20px;
-  max-height: 100%;
+}
+
+.deck__card-pic-container img {
+  border-radius: 20px;
+}
+
+@media (max-width: 1024px) {
+  .deck__card-title {
+    margin-bottom: 20px;
+  }
+  .deck__card-pic-container img {
+    object-fit: cover;
+  }
+  .deck__card {
+    min-height: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .deck__title {
+    font-size: 50px;
+    letter-spacing: 0.2rem;
+    line-height: 1;
+  }
+  .deck__card {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 7vw;
+  }
+  .deck__card-title {
+    font-size: 40px;
+  }
+  .deck__card-pic-container {
+    margin: 10px 0;
+    max-height: 45vh;
+  }
+
+  .deck__card-btn-container {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+  }
 }

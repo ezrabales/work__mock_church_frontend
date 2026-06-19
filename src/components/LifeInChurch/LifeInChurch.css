@@ -44,3 +44,11 @@
 .life__chapel-img {
   object-fit: cover;
 }
+
+@media (max-width: 1024px) {
+  .life__card-btn,
+  .life__card-btn-alternate {
+    position: relative;
+    right: 0;
+  }
+}

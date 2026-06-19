@@ -16,7 +16,7 @@ const Connect = () => {
           </>
         }
         description={
-          "Be part of the SOUL family – join a group and team and get connected today. "
+          "Be part of the DISPLAY CHURCH family – join a group and team and get connected today. "
         }
         img={connectedGroup}
       />
