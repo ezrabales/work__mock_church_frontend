@@ -24,7 +24,7 @@ const Connect = () => {
         title={"New Here?"}
         cards={[
           {
-            title: "SOUL Path",
+            title: "DISPLAY Path",
             description:
               "Your chance to find out more about us, ask questions and meet key members of our team and leadership.",
             btn: "SIGN UP",
