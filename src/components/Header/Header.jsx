@@ -49,6 +49,9 @@ const Header = () => {
   }
   // animate menu button
   useEffect(() => {
+    // console.log(
+    //   `menuIsOpening: ${menuIsOpening}\nmenuIsOpen: ${menuIsOpen}\nenuIsClosing: ${menuIsClosing}`,
+    // );
     const el = openBackgroundRef.current;
     if (!el) return;
 
@@ -66,17 +69,19 @@ const Header = () => {
       Math.hypot(window.innerWidth - cx, window.innerHeight - cy), // bottom-right
     ];
 
+    const diagonal = Math.hypot(window.innerWidth, window.innerHeight);
+    const scale = diagonal / Math.min(rect.width, rect.height);
+
     if (menuIsOpening) {
       // opening
-      const diagonal = Math.hypot(window.innerWidth, window.innerHeight);
-      const scale = diagonal / Math.min(rect.width, rect.height);
-
       el.style.transform = `scale(${scale * (window.innerWidth <= 1024 ? 2 : 1.2)})`;
       el.style.opacity = "1";
       el.style.backgroundColor = "rgb(215, 200, 177)";
     } else if (menuIsOpen) {
       // menu is open
       el.style.backgroundColor = "rgb(215, 200, 177)";
+      el.style.opacity = "1";
+      el.style.transform = `scale(${scale * (window.innerWidth <= 1024 ? 2 : 1.2)})`;
     } else if (menuIsClosing) {
       // closing
       setTimeout(
