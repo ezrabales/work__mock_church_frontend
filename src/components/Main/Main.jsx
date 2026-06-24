@@ -27,6 +27,11 @@ const Main = () => {
             Jesus and love people. As ambassadors of His kingdom, we are
             dedicated to displaying Christ in our everyday lives. We'd love to
             see you here soon as we live out our mission together.
+            <br />
+            <br />
+            We meet every Sunday at 9:00 AM and 11:00 AM. <br /> DISPLAY CHURCH
+            Some St. Kalispell, MT <br />
+            See you there!
           </>
         }
         img={welcomingHug}
