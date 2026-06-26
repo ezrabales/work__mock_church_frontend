@@ -1,0 +1,30 @@
+.not {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.not__subtitle,
+.not__description {
+  font-family: "DM Sans";
+}
+
+.not__btn {
+  font-family: "DM Sans";
+  margin-top: 20px;
+  border: 2px solid #00000000;
+}
+
+.not__btn:hover {
+  border-color: #e8e1d8;
+}
+
+@media (max-width: 768px) {
+  .not__subtitle {
+    font-size: 1.5rem;
+  }
+}

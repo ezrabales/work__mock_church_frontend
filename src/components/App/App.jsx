@@ -14,6 +14,7 @@ import Beliefs from "../Beliefs/Beliefs";
 import Leadership from "../Leadership/Leadership";
 import Groups from "../Groups/Groups";
 import Teams from "../Teams/Teams";
+import NotFound from "../NotFound/NotFound";
 
 const App = () => {
   const { pathname } = useLocation();
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/leadership" element={<Leadership />} />
         <Route path="/groups" element={<Groups />} />
         <Route path="/teams" element={<Teams />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </GlobalProvider>
