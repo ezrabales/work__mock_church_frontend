@@ -10,6 +10,7 @@ const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [menuIsOpening, setMenuIsOpening] = useState(false);
   const [menuIsClosing, setMenuIsClosing] = useState(false);
+  const [menuScale, setMenuScale] = useState(0);
   const menuOpenTime = 0.8;
   const menuTimeoutRef = useRef(null);
 
@@ -74,6 +75,7 @@ const Header = () => {
 
     if (menuIsOpening) {
       // opening
+      setMenuScale(scale * (window.innerWidth <= 1024 ? 2 : 1.2));
       el.style.transform = `scale(${scale * (window.innerWidth <= 1024 ? 2 : 1.2)})`;
       el.style.opacity = "1";
       el.style.backgroundColor = "rgb(215, 200, 177)";
@@ -81,7 +83,7 @@ const Header = () => {
       // menu is open
       el.style.backgroundColor = "rgb(215, 200, 177)";
       el.style.opacity = "1";
-      el.style.transform = `scale(${scale * (window.innerWidth <= 1024 ? 2 : 1.2)})`;
+      el.style.transform = `scale(${menuScale})`;
     } else if (menuIsClosing) {
       // closing
       setTimeout(
